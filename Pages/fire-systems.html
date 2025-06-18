@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنظمة الحماية من الحرائق - دليل شامل</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #dc3545;
+            --secondary-color: #fd7e14;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --accent-color: #0d6efd;
+        }
+        
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color );
+            line-height: 1.8;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain )"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            padding: 1.5rem;
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .navbar {
+            background: rgba(255,255,255,0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link {
+            color: var(--dark-color) !important;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(220,53,69,0.3);
+        }
+        
+        .image-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+        
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .stats-section {
+            background: var(--dark-color);
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: block;
+        }
+        
+        .content-section {
+            padding: 4rem 0;
+        }
+        
+        .content-section:nth-child(even) {
+            background: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .feature-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="bi bi-shield-fill-check me-2"></i>
+                أنظمة الحماية من الحرائق
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#alarm-systems">أنظمة الإنذار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sprinkler-systems">أنظمة الرش الآلي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fire-services">خدمات مكافحة الحرائق</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#insurance">التأمين</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#integration">التكامل</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 hero-content">
+                    <h1 class="display-4 fw-bold mb-4 fade-in">
+                        تركيب أنظمة الإنذار والرش الآلي وخدمات مكافحة الحرائق والتأمين
+                    </h1>
+                    <p class="lead mb-4 fade-in">
+                        دليل شامل لحماية الأرواح والممتلكات من خلال أحدث تقنيات السلامة من الحرائق
+                    </p>
+                    <div class="fade-in">
+                        <a href="#alarm-systems" class="btn btn-primary btn-lg me-3">
+                            <i class="bi bi-arrow-down me-2"></i>
+                            استكشف الحلول
+                        </a>
+                        <a href="#integration" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-info-circle me-2"></i>
+                            المزيد من المعلومات
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="image-container fade-in">
+                        <img src="KpCCTwUgNSeI.jpg" alt="أنظمة الحماية من الحرائق" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">95%</span>
+                        <p>نسبة الفعالية في الكشف المبكر</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">24/7</span>
+                        <p>مراقبة مستمرة</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">80%</span>
+                        <p>تقليل الخسائر المادية</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">100%</span>
+                        <p>راحة البال والأمان</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alarm Systems Section -->
+    <section id="alarm-systems" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center fade-in">أنظمة الإنذار ضد الحريق</h2>
+                    <p class="text-center text-muted mb-5 fade-in">خط الدفاع الأول للكشف المبكر عن الحرائق</p>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6 fade-in">
+                    <div class="image-container mb-4">
+                        <img src="Tyddy8E4ANuI.webp" alt="أنظمة الإنذار ضد الحريق" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in">
+                    <h3 class="mb-4">مكونات نظام الإنذار</h3>
+                    <p class="mb-4">
+                        تُعد أنظمة الإنذار ضد الحريق حجر الزاوية في استراتيجيات السلامة من الحرائق، فهي خط الدفاع الأول الذي يوفر الكشف المبكر عن أي بوادر حريق، مما يتيح الوقت الكافي للاستجابة السريعة وإخلاء المباني وتقليل الخسائر المحتملة.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <strong>لوحة التحكم المركزية:</strong> العقل المدبر للنظام
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <strong>أجهزة الكشف:</strong> كاشفات الدخان والحرارة واللهب
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <strong>أجهزة الإنذار:</strong> الأجراس والفلاشات الضوئية
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-2"></i>
+                            <strong>نقاط السحب اليدوية:</strong> للتفعيل اليدوي عند الحاجة
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 fade-in">
+                        <div class="card-header">
+                            <h4 class="mb-0">
+                                <i class="bi bi-gear-fill me-2"></i>
+                                النظام التقليدي
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p>يقسم المبنى إلى مناطق أو دوائر، وكل دائرة تحتوي على مجموعة من الكاشفات. عندما يتم تفعيل كاشف في دائرة معينة، تُظهر لوحة التحكم أن هناك حريقًا في تلك المنطقة.</p>
+                            <div class="image-container mt-3">
+                                <img src="5h1HyZfn88gx.png" alt="النظام التقليدي" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 fade-in">
+                        <div class="card-header">
+                            <h4 class="mb-0">
+                                <i class="bi bi-cpu-fill me-2"></i>
+                                النظام المعنون
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <p>يُعد هذا النظام أكثر تطورًا ودقة. فكل كاشف وجهاز في النظام له عنوان فريد خاص به، مما يسمح للوحة التحكم بتحديد الموقع الدقيق للحريق أو أي عطل في النظام.</p>
+                            <div class="image-container mt-3">
+                                <img src="GjcoSuLlZ6LQ.webp" alt="النظام المعنون" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sprinkler Systems Section -->
+    <section id="sprinkler-systems" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center fade-in">أنظمة الرش الآلي لإطفاء الحريق</h2>
+                    <p class="text-center text-muted mb-5 fade-in">استجابة فورية وفعالة للسيطرة على الحريق وإخماده</p>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6 order-lg-2 fade-in">
+                    <div class="image-container mb-4">
+                        <img src="8bAZ7ekpiP0M.jpg" alt="أنظمة الرش الآلي" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 fade-in">
+                    <h3 class="mb-4">مكونات نظام الرش الآلي</h3>
+                    <p class="mb-4">
+                        تُعد أنظمة الرش الآلي لإطفاء الحريق من أهم وسائل الحماية النشطة ضد الحرائق، حيث توفر استجابة فورية وفعالة للسيطرة على الحريق وإخماده في مراحله الأولى، مما يقلل بشكل كبير من الأضرار والخسائر المحتملة.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="bi bi-droplet-fill text-primary me-2"></i>
+                            <strong>رؤوس الرشاشات:</strong> المكونات الأساسية التي تُطلق مادة الإطفاء
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-diagram-3-fill text-primary me-2"></i>
+                            <strong>شبكة الأنابيب:</strong> توصل رؤوس الرشاشات بمصدر المياه
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-valve me-2"></i>
+                            <strong>صمامات التحكم:</strong> للتحكم في تدفق المياه
+                        </li>
+                        <li class="mb-3">
+                            <i class="bi bi-water me-2"></i>
+                            <strong>مصدر المياه:</strong> خزان مياه أو اتصال بشبكة المياه العامة
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="text-center fade-in">
+                        <div class="feature-icon">
+                            <i class="bi bi-droplet-half"></i>
+                        </div>
+                        <h5>نظام الأنابيب الرطبة</h5>
+                        <p class="text-muted">الأكثر شيوعًا وبساطة، تكون الأنابيب مملوءة بالماء بشكل دائم</p>
+                        <div class="image-container mt-3">
+                            <img src="dnaSqeG21Jzc.jpg" alt="نظام الأنابيب الرطبة" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="text-center fade-in">
+                        <div class="feature-icon">
+                            <i class="bi bi-wind"></i>
+                        </div>
+                        <h5>نظام الأنابيب الجافة</h5>
+                        <p class="text-muted">للأماكن المعرضة للتجمد، تكون الأنابيب مملوءة بالهواء المضغوط</p>
+                        <div class="image-container mt-3">
+                            <img src="o94hOtlHDZ92.webp" alt="نظام الأنابيب الجافة" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="text-center fade-in">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h5>نظام ما قبل الإجراء</h5>
+                        <p class="text-muted">للمعدات الحساسة، يتطلب تفعيل نظام الكشف أولاً</p>
+                        <div class="image-container mt-3">
+                            <img src="LSzGonEIdwjP.jpg" alt="نظام ما قبل الإجراء" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="text-center fade-in">
+                        <div class="feature-icon">
+                            <i class="bi bi-tsunami"></i>
+                        </div>
+                        <h5>نظام الغمر</h5>
+                        <p class="text-muted">للحرائق سريعة الانتشار، يُطلق الماء من جميع الرشاشات</p>
+                        <div class="image-container mt-3">
+                            <img src="1Gy4IapP7oKG.jpg" alt="نظام الغمر" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fire Services Section -->
+    <section id="fire-services" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center fade-in">خدمات مكافحة الحرائق</h2>
+                    <p class="text-center text-muted mb-5 fade-in">خدمات شاملة للوقاية والاستجابة والتدريب</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 fade-in">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-fire"></i>
+                            </div>
+                            <h5>الاستجابة للطوارئ</h5>
+                            <p>استجابة سريعة لإخماد الحرائق والإنقاذ والإسعاف في موقع الحادث</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 fade-in">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-shield-fill-check"></i>
+                            </div>
+                            <h5>الوقاية والتفتيش</h5>
+                            <p>تفتيش دوري للمباني وتقييم المخاطر وإصدار التراخيص والتصاريح</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 fade-in">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+                            <h5>التدريب والتوعية</h5>
+                            <p>تدريب الأفراد وورش العمل وتدريب فرق الاستجابة الأولية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 fade-in">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-tools"></i>
+                            </div>
+                            <h5>الصيانة</h5>
+                            <p>صيانة دورية لأنظمة الإنذار والرش الآلي وطفايات الحريق</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 fade-in">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-clipboard-data"></i>
+                            </div>
+                            <h5>الاستشارات الهندسية</h5>
+                            <p>مشورة فنية للمهندسين والمطورين لتصميم مبانٍ آمنة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 fade-in">
+                        <div class="card-body text-center">
+                            <div class="feature-icon">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <h5>خدمة 24/7</h5>
+                            <p>مراقبة ودعم مستمر على مدار الساعة طوال أيام الأسبوع</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance Section -->
+    <section id="insurance" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center fade-in">التأمين ضد الحريق</h2>
+                    <p class="text-center text-muted mb-5 fade-in">شبكة أمان مالية للحماية من الخسائر المدمرة</p>
+                </div>
+            </div>
+            
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 fade-in">
+                    <h3 class="mb-4">أهمية التأمين ضد الحريق</h3>
+                    <p class="mb-4">
+                        يُعد التأمين ضد الحريق عنصرًا حيويًا في استراتيجية الحماية الشاملة من الحرائق، حيث يوفر شبكة أمان مالية للأفراد والشركات في مواجهة الخسائر المدمرة التي قد تنجم عن الحريق.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-shield-fill-check text-success me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">الحماية المالية</h6>
+                                    <small class="text-muted">تعويض عن الخسائر</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-arrow-repeat text-primary me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">استمرارية الأعمال</h6>
+                                    <small class="text-muted">استئناف العمليات بسرعة</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-heart-fill text-danger me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">راحة البال</h6>
+                                    <small class="text-muted">حماية مالية مضمونة</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-info me-3 fs-4"></i>
+                                <div>
+                                    <h6 class="mb-1">الامتثال القانوني</h6>
+                                    <small class="text-muted">متطلبات البنوك والقوانين</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-in">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-list-check me-2"></i>
+                                التغطيات المتاحة
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="text-primary">التغطيات الأساسية:</h6>
+                                    <ul class="list-unstyled small">
+                                        <li><i class="bi bi-check text-success me-2"></i>الحريق</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>الصاعقة</li>
+                                        <li><i class="bi bi-check text-success me-2"></i>الانفجار</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-secondary">التغطيات الإضافية:</h6>
+                                    <ul class="list-unstyled small">
+                                        <li><i class="bi bi-plus text-warning me-2"></i>الشغب والإضرابات</li>
+                                        <li><i class="bi bi-plus text-warning me-2"></i>الفيضانات والعواصف</li>
+                                        <li><i class="bi bi-plus text-warning me-2"></i>الزلازل</li>
+                                        <li><i class="bi bi-plus text-warning me-2"></i>السرقة</li>
+                                        <li><i class="bi bi-plus text-warning me-2"></i>فقدان الإيجار</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section id="integration" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="section-title text-center fade-in">التكامل والسلامة الشاملة</h2>
+                    <p class="text-center text-muted mb-5 fade-in">منظومة متكاملة للحماية الشاملة من الحرائق</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card fade-in">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <div class="feature-icon mx-auto">
+                                    <i class="bi bi-diagram-3"></i>
+                                </div>
+                                <h3>أهمية التكامل</h3>
+                            </div>
+                            <p class="text-center mb-4">
+                                لا يكفي وجود أنظمة إنذار ورش آلي وخدمات مكافحة حرائق وتأمين بشكل منفصل لضمان أقصى درجات السلامة من الحرائق. فالقوة الحقيقية تكمن في تكامل هذه العناصر معًا لتشكيل منظومة شاملة ومتكاملة للحماية.
+                            </p>
+                            
+                            <div class="row text-center">
+                                <div class="col-md-3 mb-4">
+                                    <div class="p-3">
+                                        <i class="bi bi-1-circle-fill text-primary fs-1 mb-3"></i>
+                                        <h6>الوقاية من الحرائق</h6>
+                                        <small class="text-muted">التصميم الآمن والصيانة الدورية</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="p-3">
+                                        <i class="bi bi-2-circle-fill text-success fs-1 mb-3"></i>
+                                        <h6>الكشف المبكر</h6>
+                                        <small class="text-muted">أنظمة الإنذار والكشف</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="p-3">
+                                        <i class="bi bi-3-circle-fill text-warning fs-1 mb-3"></i>
+                                        <h6>الإطفاء والسيطرة</h6>
+                                        <small class="text-muted">أنظمة الرش وفرق الإطفاء</n></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <div class="p-3">
+                                        <i class="bi bi-4-circle-fill text-danger fs-1 mb-3"></i>
+                                        <h6>التعافي</h6>
+                                        <small class="text-muted">التأمين وإدارة الكوارث</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-white mb-3">
+                        <i class="bi bi-shield-fill-check me-2"></i>
+                        أنظمة الحماية من الحرائق
+                    </h5>
+                    <p class="text-light">
+                        دليل شامل لحماية الأرواح والممتلكات من خلال أحدث تقنيات السلامة من الحرائق والأنظمة المتكاملة.
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="text-white mb-3">الأقسام الرئيسية</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#alarm-systems" class="text-light text-decoration-none">أنظمة الإنذار</a></li>
+                        <li class="mb-2"><a href="#sprinkler-systems" class="text-light text-decoration-none">أنظمة الرش الآلي</a></li>
+                        <li class="mb-2"><a href="#fire-services" class="text-light text-decoration-none">خدمات مكافحة الحرائق</a></li>
+                        <li class="mb-2"><a href="#insurance" class="text-light text-decoration-none">التأمين ضد الحريق</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="text-white mb-3">معلومات الاتصال</h6>
+                    <p class="text-light mb-2">
+                        <i class="bi bi-telephone-fill me-2"></i>
+                        للطوارئ: 998
+                    </p>
+                    <p class="text-light mb-2">
+                        <i class="bi bi-envelope-fill me-2"></i>
+                        info@firesafety.com
+                    </p>
+                    <p class="text-light">
+                        <i class="bi bi-geo-alt-fill me-2"></i>
+                        المملكة العربية السعودية
+                    </p>
+                </div>
+            </div>
+            <hr class="border-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-light mb-0">&copy; 2025 أنظمة الحماية من الحرائق. جميع الحقوق محفوظة.</p>
+                </div>
+              
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]' ).forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255,255,255,0.98)';
+            } else {
+                navbar.style.background = 'rgba(255,255,255,0.95)';
+            }
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
