@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أنظمة التكييف المركزية - حلول التبريد المتطورة</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c5aa0;
+            --secondary-color: #f8f9fa;
+            --accent-color: #17a2b8;
+            --dark-color: #1a1a1a;
+            --light-color: #ffffff;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --gradient-primary: linear-gradient(135deg, #2c5aa0 0%, #17a2b8 100%);
+            --gradient-secondary: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            --shadow-light: 0 2px 15px rgba(0,0,0,0.1);
+            --shadow-medium: 0 5px 25px rgba(0,0,0,0.15);
+            --shadow-heavy: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: var(--gradient-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,0 1000,300 1000,1000 0,700"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            display: block;
+            color: var(--warning-color);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Floating Animation */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes rotateIn {
+            from {
+                opacity: 0;
+                transform: rotate(-180deg) scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #666;
+            margin-bottom: 5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Cards */
+        .modern-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-light);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(44, 90, 160, 0.1);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modern-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .modern-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .modern-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            display: block;
+            animation: rotateIn 0.8s ease-out;
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+
+        .card-text {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-list li:hover {
+            background-color: #f8f9fa;
+            padding-right: 1rem;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list i {
+            color: var(--success-color);
+            margin-left: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            margin-bottom: 3rem;
+        }
+
+        .comparison-table .table {
+            margin-bottom: 0;
+        }
+
+        .comparison-table .table thead th {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .comparison-table .table tbody td {
+            padding: 1.2rem;
+            text-align: center;
+            border-color: #eee;
+            vertical-align: middle;
+        }
+
+        .comparison-table .table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Progress Bars */
+        .progress-modern {
+            height: 8px;
+            border-radius: 10px;
+            background-color: #e9ecef;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-modern .progress-bar {
+            border-radius: 10px;
+            background: var(--gradient-primary);
+            transition: width 2s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-modern .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: 60%;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 60%;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+            position: relative;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            right: 50%;
+            transform: translateX(50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 4px var(--primary-color);
+        }
+
+        /* Accordion */
+        .accordion-modern .accordion-item {
+            border: none;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+        }
+
+        .accordion-modern .accordion-header .accordion-button {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .accordion-modern .accordion-header .accordion-button:not(.collapsed) {
+            background: var(--primary-color);
+            box-shadow: none;
+        }
+
+        .accordion-modern .accordion-body {
+            padding: 2rem;
+            background: white;
+        }
+
+        /* Statistics Section */
+        .stats-section {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle fill="rgba(255,255,255,0.03)" cx="100" cy="100" r="100"/><circle fill="rgba(255,255,255,0.03)" cx="900" cy="900" r="150"/><circle fill="rgba(255,255,255,0.03)" cx="200" cy="800" r="80"/></svg>');
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--warning-color);
+        }
+
+        .stat-value {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            counter-reset: num var(--num);
+        }
+
+        .stat-value::after {
+            content: counter(num);
+            animation: countUp 2s ease-out;
+        }
+
+        @keyframes countUp {
+            from { --num: 0; }
+            to { --num: var(--target); }
+        }
+
+        .stat-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h5 {
+            color: var(--warning-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--warning-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 2rem;
+            text-align: center;
+            color: #999;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .timeline::before {
+                right: 1rem;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 3rem;
+                margin-right: 0;
+            }
+        }
+
+        /* Scroll Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+
+        /* Print Styles for PDF */
+        @media print {
+            body {
+                font-size: 12px;
+                line-height: 1.4;
+            }
+            
+            .hero-section {
+                min-height: auto;
+                padding: 40px 0;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .modern-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            
+            .timeline-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            <i class="fas fa-building floating" style="color: #ffc107; margin-left: 1rem;"></i>
+                            أنظمة التكييف المركزية
+                        </h1>
+                        <p class="hero-subtitle">
+                            حلول التبريد المتطورة للمباني التجارية والسكنية الكبيرة - تقنيات حديثة، كفاءة عالية، وتوزيع مثالي للهواء البارد
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">95%</span>
+                                <span class="stat-label">كفاءة الطاقة</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">التشغيل المستمر</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">+15</span>
+                                <span class="stat-label">سنة خبرة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title animate-on-scroll">مقدمة عن أنظمة التكييف المركزية</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        تعرف على أحدث تقنيات التبريد المركزي وكيف تحدث ثورة في عالم التكييف
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-info-circle card-icon"></i>
+                        <h3 class="card-title">ما هي أنظمة التكييف المركزية؟</h3>
+                        <p class="card-text">
+                            أنظمة التكييف المركزية هي حلول متطورة للتحكم في درجة الحرارة والرطوبة في المباني الكبيرة والمساحات الواسعة. تعتمد هذه الأنظمة على وحدة مركزية قوية تقوم بتبريد أو تسخين الهواء، ثم توزيعه عبر شبكة من القنوات إلى جميع أنحاء المبنى.
+                        </p>
+                        <p class="card-text">
+                            تتميز هذه الأنظمة بقدرتها على التحكم الدقيق في البيئة الداخلية، مما يوفر راحة استثنائية للمستخدمين مع تحقيق كفاءة عالية في استهلاك الطاقة. كما تسمح بالتحكم المنفصل في درجات الحرارة لمناطق مختلفة من المبنى، مما يعرف بنظام التقسيم الحراري.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-cogs card-icon"></i>
+                        <h3 class="card-title">مبدأ العمل الأساسي</h3>
+                        <p class="card-text">
+                            يعتمد مبدأ عمل أنظمة التكييف المركزية على دورة التبريد الأساسية، حيث يتم ضغط المبرد في الضاغط، ثم تبريده في المكثف الخارجي، وتمريره عبر صمام التمدد إلى المبخر الداخلي حيث يمتص الحرارة من الهواء.
+                        </p>
+                        <p class="card-text">
+                            الهواء المبرد يتم دفعه بواسطة مراوح قوية عبر شبكة من القنوات المعزولة، والتي تصل إلى جميع الغرف والمساحات المطلوب تكييفها. يتم التحكم في تدفق الهواء وتوزيعه من خلال نظام متطور من الصمامات والمنظمات.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types Section -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title animate-on-scroll">أنواع أنظمة التكييف المركزية</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        تنوع واسع من الأنظمة لتلبية احتياجات مختلف أنواع المباني والتطبيقات
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-wind card-icon"></i>
+                        <h3 class="card-title">أنظمة الهواء بالكامل (All-Air Systems)</h3>
+                        <p class="card-text">
+                            هذا النوع من الأنظمة يعتمد على الهواء كوسيط وحيد لنقل الطاقة الحرارية. يتم تبريد أو تسخين كمية كبيرة من الهواء في وحدة مركزية، ثم توزيعها عبر قنوات إلى المساحات المختلفة.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> توزيع موحد للهواء</li>
+                            <li><i class="fas fa-check"></i> سهولة الصيانة</li>
+                            <li><i class="fas fa-check"></i> تحكم مركزي</li>
+                            <li><i class="fas fa-check"></i> مناسب للمساحات الكبيرة</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-tint card-icon"></i>
+                        <h3 class="card-title">أنظمة الماء بالكامل (All-Water Systems)</h3>
+                        <p class="card-text">
+                            تستخدم الماء المبرد أو الساخن كوسيط لنقل الطاقة الحرارية. يتم ضخ الماء من وحدة التبريد المركزية إلى وحدات مروحة-ملف في كل منطقة، حيث يتم تبديل الحرارة مع الهواء المحلي.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> كفاءة عالية في النقل</li>
+                            <li><i class="fas fa-check"></i> مرونة في التحكم</li>
+                            <li><i class="fas fa-check"></i> أقنية أصغر حجماً</li>
+                            <li><i class="fas fa-check"></i> إمكانية التدفئة والتبريد</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-compress-arrows-alt card-icon"></i>
+                        <h3 class="card-title">الأنظمة المختلطة (Air-Water Systems)</h3>
+                        <p class="card-text">
+                            تجمع بين مزايا الأنظمة الهوائية والمائية، حيث يتم توفير الهواء النقي مركزياً بينما يتم التحكم في درجة الحرارة محلياً باستخدام الماء المبرد أو الساخن.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> توفير الهواء النقي</li>
+                            <li><i class="fas fa-check"></i> تحكم محلي دقيق</li>
+                            <li><i class="fas fa-check"></i> كفاءة طاقة ممتازة</li>
+                            <li><i class="fas fa-check"></i> مرونة في التشغيل</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-thermometer-half card-icon"></i>
+                        <h3 class="card-title">أنظمة التدفق المتغير (Variable Air Volume)</h3>
+                        <p class="card-text">
+                            أنظمة متطورة تتحكم في كمية الهواء المتدفق إلى كل منطقة حسب الحاجة الفعلية، مما يحقق كفاءة عالية في استهلاك الطاقة ويوفر راحة مثلى للمستخدمين.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> توفير طاقة كبير</li>
+                            <li><i class="fas fa-check"></i> تحكم دقيق في كل منطقة</li>
+                            <li><i class="fas fa-check"></i> تشغيل هادئ</li>
+                            <li><i class="fas fa-check"></i> صيانة أقل</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-leaf card-icon"></i>
+                        <h3 class="card-title">أنظمة التبريد بالامتصاص</h3>
+                        <p class="card-text">
+                            تقنية صديقة للبيئة تستخدم الحرارة بدلاً من الكهرباء كمصدر طاقة أساسي للتبريد. مناسبة للمباني التي تتوفر فيها مصادر حرارة مهدرة أو طاقة شمسية.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> صداقة للبيئة</li>
+                            <li><i class="fas fa-check"></i> استغلال الحرارة المهدرة</li>
+                            <li><i class="fas fa-check"></i> تشغيل هادئ جداً</li>
+                            <li><i class="fas fa-check"></i> عمر تشغيلي طويل</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-sync-alt card-icon"></i>
+                        <h3 class="card-title">أنظمة الضخ الحراري</h3>
+                        <p class="card-text">
+                            أنظمة متقدمة قادرة على توفير التدفئة والتبريد في نفس الوقت لمناطق مختلفة من المبنى، من خلال نقل الحرارة من المناطق التي تحتاج تبريد إلى المناطق التي تحتاج تدفئة.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> كفاءة طاقة فائقة</li>
+                            <li><i class="fas fa-check"></i> تدفئة وتبريد متزامن</li>
+                            <li><i class="fas fa-check"></i> استرداد الحرارة</li>
+                            <li><i class="fas fa-check"></i> تقليل التكاليف التشغيلية</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title animate-on-scroll">المكونات الرئيسية لأنظمة التكييف المركزية</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        تفاصيل شاملة عن كل مكون وأهميته في النظام المتكامل
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-compress card-icon"></i>
+                        <h3 class="card-title">الضاغط (Compressor)</h3>
+                        <p class="card-text">
+                            قلب نظام التكييف المركزي، وهو المسؤول عن ضغط غاز المبرد ورفع درجة حرارته وضغطه. يتوفر بأنواع مختلفة مثل الضواغط الترددية، اللولبية، والطاردة المركزية. كل نوع له خصائصه الفريدة من حيث الكفاءة، مستوى الضوضاء، والقدرة على التحمل.
+                        </p>
+                        <p class="card-text">
+                            الضواغط الحديثة مزودة بأنظمة تحكم متقدمة تسمح بتعديل السرعة والقدرة حسب الحمل المطلوب، مما يحسن من كفاءة استهلاك الطاقة بشكل كبير. كما تتضمن أنظمة حماية متطورة لمنع التلف في حالات التشغيل غير الطبيعية.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-snowflake card-icon"></i>
+                        <h3 class="card-title">المبخر (Evaporator)</h3>
+                        <p class="card-text">
+                            المكون المسؤول عن امتصاص الحرارة من الهواء الداخلي. يحتوي على شبكة من الأنابيب النحاسية مع زعانف لزيادة سطح التبادل الحراري. يمر المبرد السائل عبر هذه الأنابيب ويتبخر، مما يؤدي إلى امتصاص الحرارة من الهواء المار حوله.
+                        </p>
+                        <p class="card-text">
+                            المبخرات الحديثة مصممة بتقنيات متطورة مثل الأنابيب المايكرو-تشانل والزعانف المحسنة هيدروديناميكياً، مما يزيد من كفاءة نقل الحرارة ويقلل من حجم الوحدة المطلوب.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-fire card-icon"></i>
+                        <h3 class="card-title">المكثف (Condenser)</h3>
+                        <p class="card-text">
+                            يقوم بطرد الحرارة الممتصة من الداخل إلى الخارج. يتكون من شبكة من الأنابيب والزعانف مع مراوح قوية لتسريع عملية التبديد الحراري. المكثف الجيد التصميم يحقق كفاءة عالية في طرد الحرارة مع استهلاك أقل للطاقة.
+                        </p>
+                        <p class="card-text">
+                            تتنوع أنواع المكثفات بين المبردة بالهواء والمبردة بالماء، حيث تختار حسب ظروف الموقع وتوفر المياه. المكثفات المبردة بالماء تحقق كفاءة أعلى لكنها تحتاج نظام تبريد مياه منفصل.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-adjust card-icon"></i>
+                        <h3 class="card-title">صمام التمدد (Expansion Valve)</h3>
+                        <p class="card-text">
+                            يتحكم في تدفق المبرد من الضغط العالي إلى الضغط المنخفض، مما يسمح للمبرد بالتمدد والتبخر في المبخر. هناك أنواع مختلفة مثل صمامات التمدد الحرارية والإلكترونية، كل منها له دقة تحكم مختلفة.
+                        </p>
+                        <p class="card-text">
+                            الصمامات الإلكترونية الحديثة تتيح تحكماً دقيقاً جداً في تدفق المبرد، مما يحسن من أداء النظام ويقلل من استهلاك الطاقة. كما تسمح بالتكيف مع ظروف التشغيل المتغيرة بشكل تلقائي.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-route card-icon"></i>
+                        <h3 class="card-title">شبكة القنوات (Ductwork)</h3>
+                        <p class="card-text">
+                            نظام متكامل من القنوات المعزولة لتوزيع الهواء المكيف إلى جميع أنحاء المبنى. التصميم الصحيح للقنوات أمر بالغ الأهمية لضمان التوزيع المتوازن للهواء وتقليل فقدان الطاقة.
+                        </p>
+                        <p class="card-text">
+                            القنوات الحديثة مصنوعة من مواد عالية الكفاءة مع عزل حراري متطور، وتتضمن صمامات توازن، منظمات تدفق، ومرشحات هواء متقدمة لضمان جودة الهواء الداخلي.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-microchip card-icon"></i>
+                        <h3 class="card-title">أنظمة التحكم الذكية</h3>
+                        <p class="card-text">
+                            أدمغة النظام الحديث، تتضمن حساسات درجة الحرارة والرطوبة، وحدات تحكم مبرمجة، وأنظمة إدارة المباني. تسمح بالتحكم الدقيق والمراقبة المستمرة لجميع معاملات التشغيل.
+                        </p>
+                        <p class="card-text">
+                            أنظمة التحكم الذكية الحديثة قادرة على التعلم من أنماط الاستخدام وتحسين الأداء تلقائياً، كما تتيح التحكم عن بعد والتشخيص المبكر للأعطال، مما يقلل من تكاليف الصيانة ويحسن الموثوقية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title text-white mb-5">إحصائيات وأرقام مهمة</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <i class="fas fa-bolt stat-icon"></i>
+                        <div class="stat-value" style="--target: 40;">40</div>
+                        <div class="stat-description">% توفير في الطاقة مقارنة بالأنظمة التقليدية</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-alt stat-icon"></i>
+                        <div class="stat-value" style="--target: 25;">25</div>
+                        <div class="stat-description">سنة متوسط العمر الافتراضي للنظام</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <i class="fas fa-users stat-icon"></i>
+                        <div class="stat-value" style="--target: 1000;">1000+</div>
+                        <div class="stat-description">شخص يمكن خدمتهم بنظام واحد</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-card">
+                        <i class="fas fa-thumbs-up stat-icon"></i>
+                        <div class="stat-value" style="--target: 99;">99</div>
+                        <div class="stat-description">% معدل رضا العملاء</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title animate-on-scroll">مزايا أنظمة التكييف المركزية</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        اكتشف الفوائد العديدة التي تجعل من الأنظمة المركزية الخيار الأمثل
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-chart-line card-icon text-success"></i>
+                        <h3 class="card-title">كفاءة الطاقة العالية</h3>
+                        <p class="card-text">
+                            تحقق أنظمة التكييف المركزية كفاءة في استهلاك الطاقة تصل إلى 95% مقارنة بالأنظمة المنفصلة. هذا يترجم إلى توفير كبير في فواتير الكهرباء وتقليل البصمة الكربونية للمبنى.
+                        </p>
+                        <div class="progress-modern">
+                            <div class="progress-bar" style="width: 95%"></div>
+                        </div>
+                        <small class="text-muted">كفاءة الطاقة: 95%</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-balance-scale card-icon text-primary"></i>
+                        <h3 class="card-title">توزيع متوازن ومتساوٍ</h3>
+                        <p class="card-text">
+                            يضمن النظام المركزي توزيعاً متوازناً للهواء البارد في جميع أنحاء المبنى، مما يلغي المناطق الساخنة والباردة ويوفر راحة موحدة لجميع المستخدمين.
+                        </p>
+                        <div class="progress-modern">
+                            <div class="progress-bar" style="width: 98%"></div>
+                        </div>
+                        <small class="text-muted">التوزيع المتوازن: 98%</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-volume-down card-icon text-info"></i>
+                        <h3 class="card-title">تشغيل هادئ</h3>
+                        <p class="card-text">
+                            بفضل وضع الوحدات الرئيسية خارج المساحات السكنية أو مكاتب العمل، تعمل الأنظمة المركزية بصمت، مما يوفر بيئة هادئة ومريحة للعمل والمعيشة.
+                        </p>
+                        <div class="progress-modern">
+                            <div class="progress-bar" style="width: 92%"></div>
+                        </div>
+                        <small class="text-muted">مستوى الهدوء: 92%</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-sliders-h card-icon text-warning"></i>
+                        <h3 class="card-title">تحكم دقيق ومرن</h3>
+                        <p class="card-text">
+                            أنظمة التحكم المتطورة تتيح ضبط درجة الحرارة والرطوبة بدقة عالية، مع إمكانية التحكم المنفصل في مناطق مختلفة من المبنى حسب الاحتياجات المحددة.
+                        </p>
+                        <div class="progress-modern">
+                            <div class="progress-bar" style="width: 96%"></div>
+                        </div>
+                        <small class="text-muted">دقة التحكم: 96%</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-leaf card-icon text-success"></i>
+                        <h3 class="card-title">صداقة للبيئة</h3>
+                        <p class="card-text">
+                            استخدام مبردات صديقة للبيئة وتقنيات توفير الطاقة المتقدمة يجعل من هذه الأنظمة خياراً مستداماً يساهم في حماية البيئة وتقليل الانبعاثات الضارة.
+                        </p>
+                        <div class="progress-modern">
+                            <div class="progress-bar" style="width: 88%"></div>
+                        </div>
+                        <small class="text-muted">الاستدامة البيئية: 88%</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-tools card-icon text-danger"></i>
+                        <h3 class="card-title">صيانة مركزية مبسطة</h3>
+                        <p class="card-text">
+                            تجميع المعدات الرئيسية في موقع واحد يسهل عمليات الصيانة والإصلاح، مما يقلل من التكاليف والوقت المطلوب للحفاظ على النظام في أفضل حالاته.
+                        </p>
+                        <div class="progress-modern">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                        <small class="text-muted">سهولة الصيانة: 90%</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title animate-on-scroll">التطبيقات والاستخدامات</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        مجالات واسعة من التطبيقات تناسب مختلف أنواع المباني والمؤسسات
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-building card-icon"></i>
+                        <h3 class="card-title">المباني التجارية والإدارية</h3>
+                        <p class="card-text">
+                            تعد المباني التجارية والإدارية من أهم تطبيقات أنظمة التكييف المركزية. هذه المباني تتطلب تحكماً دقيقاً في البيئة الداخلية لضمان راحة الموظفين والعملاء، مع الحاجة إلى كفاءة عالية في استهلاك الطاقة لتقليل التكاليف التشغيلية.
+                        </p>
+                        <p class="card-text">
+                            أنظمة التكييف المركزية في هذه المباني تتضمن ميزات متقدمة مثل التحكم في جودة الهواء الداخلي، أنظمة الاستشعار الذكية، والقدرة على التكيف مع أنماط الإشغال المتغيرة خلال اليوم.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> مكاتب الشركات الكبرى</li>
+                            <li><i class="fas fa-check"></i> المراكز التجارية والمولات</li>
+                            <li><i class="fas fa-check"></i> البنوك والمؤسسات المالية</li>
+                            <li><i class="fas fa-check"></i> مباني الحكومة والوزارات</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-hospital card-icon"></i>
+                        <h3 class="card-title">المستشفيات والمراكز الطبية</h3>
+                        <p class="card-text">
+                            القطاع الطبي يتطلب أعلى معايير جودة الهواء والتحكم في البيئة. أنظمة التكييف المركزية في المستشفيات مصممة لتوفير هواء نظيف ومعقم، مع التحكم الدقيق في الضغط الجوي لمنع انتشار العدوى بين الأقسام المختلفة.
+                        </p>
+                        <p class="card-text">
+                            هذه الأنظمة تتضمن مرشحات HEPA عالية الكفاءة، أنظمة تعقيم بالأشعة فوق البنفسجية، وأنظمة مراقبة مستمرة لضمان الامتثال للمعايير الصحية الصارمة.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> غرف العمليات المعقمة</li>
+                            <li><i class="fas fa-check"></i> وحدات العناية المركزة</li>
+                            <li><i class="fas fa-check"></i> المختبرات الطبية</li>
+                            <li><i class="fas fa-check"></i> صيدليات المستشفيات</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-graduation-cap card-icon"></i>
+                        <h3 class="card-title">المؤسسات التعليمية</h3>
+                        <p class="card-text">
+                            الجامعات والمدارس والمعاهد التدريبية تحتاج إلى بيئة مريحة ومحفزة للتعلم. أنظمة التكييف المركزية تضمن بيئة داخلية مثالية تساعد على التركيز والإنتاجية، مع مراعاة المتطلبات الخاصة للمختبرات والمكتبات.
+                        </p>
+                        <p class="card-text">
+                            هذه الأنظمة مصممة للتعامل مع الأحمال المتغيرة خلال اليوم الدراسي والمواسم المختلفة، مع إمكانية التحكم المنفصل في القاعات والمساحات المختلفة.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> القاعات الدراسية الكبيرة</li>
+                            <li><i class="fas fa-check"></i> المكتبات ومراكز التعلم</li>
+                            <li><i class="fas fa-check"></i> المختبرات العلمية</li>
+                            <li><i class="fas fa-check"></i> المدرجات والمسارح</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-industry card-icon"></i>
+                        <h3 class="card-title">المنشآت الصناعية</h3>
+                        <p class="card-text">
+                            المصانع ومراكز الإنتاج تتطلب تحكماً دقيقاً في البيئة لضمان جودة المنتجات وسلامة العمال. أنظمة التكييف المركزية الصناعية مصممة للتعامل مع الأحمال الحرارية العالية والملوثات الصناعية.
+                        </p>
+                        <p class="card-text">
+                            تتضمن هذه الأنظمة تقنيات متقدمة لتنقية الهواء، التحكم في الرطوبة، وإزالة الأبخرة والغازات الضارة، مما يضمن بيئة عمل آمنة ومطابقة للمعايير الصناعية.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> خطوط الإنتاج الصناعي</li>
+                            <li><i class="fas fa-check"></i> المستودعات الكبيرة</li>
+                            <li><i class="fas fa-check"></i> مراكز معالجة البيانات</li>
+                            <li><i class="fas fa-check"></i> المعامل الكيميائية</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-home card-icon"></i>
+                        <h3 class="card-title">المجمعات السكنية الفاخرة</h3>
+                        <p class="card-text">
+                            الفلل الكبيرة والمجمعات السكنية الفاخرة تستفيد من أنظمة التكييف المركزية لتوفير راحة استثنائية لجميع السكان. هذه الأنظمة تقدم تحكماً فردياً لكل وحدة سكنية مع الاستفادة من كفاءة النظام المركزي.
+                        </p>
+                        <p class="card-text">
+                            تتضمن ميزات متقدمة مثل التحكم الذكي عبر الهواتف الذكية، أنظمة توفير الطاقة التلقائية، والتكامل مع أنظمة إدارة المنزل الذكي.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> الفلل والقصور</li>
+                            <li><i class="fas fa-check"></i> المجمعات السكنية الراقية</li>
+                            <li><i class="fas fa-check"></i> البنتهاوس والشقق الفاخرة</li>
+                            <li><i class="fas fa-check"></i> المنتجعات والفنادق</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-utensils card-icon"></i>
+                        <h3 class="card-title">المطاعم والفنادق</h3>
+                        <p class="card-text">
+                            صناعة الضيافة تتطلب أعلى معايير الراحة لضمان رضا الضيوف. أنظمة التكييف المركزية في الفنادق والمطاعم مصممة لتوفير بيئة مثالية مع مراعاة التحديات الخاصة مثل المطابخ والأحمال الحرارية العالية.
+                        </p>
+                        <p class="card-text">
+                            تتضمن حلولاً متخصصة للتعامل مع الروائح، الرطوبة العالية، والحاجة إلى هواء نقي مستمر، مع أنظمة توزيع مصممة لتوفير راحة متسقة في جميع المساحات.
+                        </p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check"></i> غرف الضيوف والأجنحة</li>
+                            <li><i class="fas fa-check"></i> صالات الطعام والمطاعم</li>
+                            <li><i class="fas fa-check"></i> صالات المؤتمرات والحفلات</li>
+                            <li><i class="fas fa-check"></i> مناطق الاستقبال والردهات</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Timeline -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title animate-on-scroll">مراحل التركيب والتنفيذ</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        خطوات شاملة ومدروسة لضمان تركيب احترافي وتشغيل مثالي
+                    </p>
+                </div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <h4><i class="fas fa-clipboard-list text-primary"></i> المرحلة الأولى: الدراسة والتخطيط</h4>
+                        <p>
+                            تبدأ هذه المرحلة بدراسة شاملة للموقع وتحليل الاحتياجات. يقوم فريق من المهندسين المختصين بفحص المبنى وحساب الأحمال الحرارية، تحديد أفضل مواقع للوحدات والقنوات، ووضع التصاميم الأولية.
+                        </p>
+                        <p>
+                            كما تتضمن هذه المرحلة دراسة الجدوى الاقتصادية، اختيار أنسب التقنيات، والحصول على التراخيص والموافقات المطلوبة من الجهات المختصة.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <h4><i class="fas fa-drafting-compass text-success"></i> المرحلة الثانية: التصميم النهائي</h4>
+                        <p>
+                            بناءً على الدراسة الأولية، يتم وضع التصاميم النهائية التفصيلية للنظام بالكامل. تشمل هذه التصاميم مخططات القنوات، مواقع الوحدات، أنظمة التحكم، والتوصيلات الكهربائية.
+                        </p>
+                        <p>
+                            يتم استخدام برامج المحاكاة المتقدمة لضمان الأداء الأمثل، وتحديد المواصفات الدقيقة لجميع المكونات والمعدات المطلوبة.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <h4><i class="fas fa-shopping-cart text-info"></i> المرحلة الثالثة: التوريد والشراء</h4>
+                        <p>
+                            بعد اعتماد التصاميم، يتم شراء جميع المعدات والمواد المطلوبة من موردين معتمدين. نحرص على اختيار أفضل الماركات العالمية والمحلية التي تضمن الجودة والموثوقية.
+                        </p>
+                        <p>
+                            يتم فحص جميع المعدات عند الاستلام للتأكد من مطابقتها للمواصفات المطلوبة، مع الاحتفاظ بشهادات الضمان والصيانة من الشركات المصنعة.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <h4><i class="fas fa-hard-hat text-warning"></i> المرحلة الرابعة: أعمال التمديد والتركيب</h4>
+                        <p>
+                            تبدأ أعمال التركيب الفعلية بتنفيذ شبكة القنوات والتمديدات الكهربائية. يتم العمل وفقاً لأعلى معايير الجودة والسلامة، مع الالتزام بالجداول الزمنية المحددة.
+                        </p>
+                        <p>
+                            تشمل هذه المرحلة تركيب الوحدات الرئيسية، توصيل الأنابيب، تركيب أنظمة التحكم، والتأكد من سلامة جميع التوصيلات والعزل.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <h4><i class="fas fa-play-circle text-danger"></i> المرحلة الخامسة: التشغيل التجريبي</h4>
+                        <p>
+                            بعد انتهاء التركيب، يتم إجراء تشغيل تجريبي شامل للنظام للتأكد من سلامة التشغيل وتحقيق الأداء المطلوب. يتم فحص جميع المعاملات والتأكد من عمل جميع المكونات بكفاءة.
+                        </p>
+                        <p>
+                            خلال هذه المرحلة يتم ضبط النظام، معايرة أجهزة التحكم، واختبار أنظمة الأمان والحماية. كما يتم تدريب فريق التشغيل والصيانة على استخدام النظام.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <h4><i class="fas fa-certificate text-success"></i> المرحلة السادسة: التسليم والضمان</h4>
+                        <p>
+                            تتم عملية التسليم النهائي بعد التأكد من أن النظام يعمل بالكفاءة المطلوبة. يتم تسليم العميل جميع المستندات الفنية، كتيبات التشغيل، وشهادات الضمان.
+                        </p>
+                        <p>
+                            نقدم ضماناً شاملاً على النظام يغطي جميع المكونات والتركيبات، مع برنامج صيانة دورية لضمان استمرارية الأداء الأمثل على المدى الطويل.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title animate-on-scroll">الصيانة والعناية</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        برامج صيانة شاملة لضمان الأداء الأمثل والعمر الطويل للنظام
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="accordion accordion-modern" id="maintenanceAccordion">
+                        <div class="accordion-item animate-on-scroll">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="fas fa-calendar-check me-3"></i>
+                                    الصيانة الدورية الشهرية
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#maintenanceAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        تتضمن الصيانة الشهرية فحص وتنظيف المرشحات، فحص مستويات المبرد، تنظيف المكثف والمبخر، وفحص التوصيلات الكهربائية. هذه الأعمال ضرورية لضمان كفاءة التشغيل ومنع تراكم الأتربة والملوثات.
+                                    </p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> تنظيف واستبدال المرشحات</li>
+                                        <li><i class="fas fa-check"></i> فحص مستويات المبردات والزيوت</li>
+                                        <li><i class="fas fa-check"></i> تنظيف ملفات التبريد والتكثيف</li>
+                                        <li><i class="fas fa-check"></i> فحص التوصيلات الكهربائية</li>
+                                        <li><i class="fas fa-check"></i> قياس معاملات التشغيل الأساسية</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item animate-on-scroll">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="fas fa-tools me-3"></i>
+                                    الصيانة الفصلية المتقدمة
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#maintenanceAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        كل ثلاثة أشهر، يتم إجراء فحص شامل أكثر تفصيلاً يشمل فحص الضاغط، أنظمة التحكم، القنوات، وأنظمة الأمان. هذه الصيانة تهدف إلى اكتشاف أي مشاكل محتملة قبل تفاقمها.
+                                    </p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> فحص شامل للضاغط والمحرك</li>
+                                        <li><i class="fas fa-check"></i> معايرة أنظمة التحكم والحساسات</li>
+                                        <li><i class="fas fa-check"></i> فحص وتنظيف شبكة القنوات</li>
+                                        <li><i class="fas fa-check"></i> اختبار أنظمة الأمان والحماية</li>
+                                        <li><i class="fas fa-check"></i> قياس الكفاءة الإجمالية للنظام</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item animate-on-scroll">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="fas fa-microscope me-3"></i>
+                                    الصيانة السنوية الشاملة
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#maintenanceAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        الصيانة السنوية تشمل فحصاً شاملاً وعميقاً لجميع مكونات النظام، مع استبدال القطع المستهلكة، تحديث البرمجيات، وإجراء اختبارات الأداء المتقدمة. هذه الصيانة ضرورية لضمان الأداء الأمثل والعمر الطويل.
+                                    </p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> فحص وصيانة جميع المكونات الميكانيكية</li>
+                                        <li><i class="fas fa-check"></i> استبدال القطع المستهلكة والمرشحات</li>
+                                        <li><i class="fas fa-check"></i> تحديث برمجيات التحكم</li>
+                                        <li><i class="fas fa-check"></i> إجراء اختبارات الأداء والكفاءة</li>
+                                        <li><i class="fas fa-check"></i> تنظيف شامل لجميع المكونات</li>
+                                        <li><i class="fas fa-check"></i> تقرير شامل عن حالة النظام</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item animate-on-scroll">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    <i class="fas fa-exclamation-triangle me-3"></i>
+                                    الصيانة الطارئة والإصلاحات
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#maintenanceAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        نوفر خدمة صيانة طارئة على مدار الساعة لضمان عدم توقف النظام في الأوقات الحرجة. فريقنا المختص قادر على التعامل مع جميع أنواع الأعطال وتوفير الحلول السريعة والفعالة.
+                                    </p>
+                                    <ul class="feature-list">
+                                        <li><i class="fas fa-check"></i> استجابة سريعة خلال 2-4 ساعات</li>
+                                        <li><i class="fas fa-check"></i> فريق فني مدرب ومعتمد</li>
+                                        <li><i class="fas fa-check"></i> قطع غيار أصلية متوفرة</li>
+                                        <li><i class="fas fa-check"></i> تشخيص دقيق باستخدام أحدث الأجهزة</li>
+                                        <li><i class="fas fa-check"></i> ضمان على جميع أعمال الإصلاح</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title animate-on-scroll">مقارنة بين أنواع أنظمة التكييف</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        جدول شامل يوضح الفروقات والمزايا بين الأنظمة المختلفة
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="comparison-table animate-on-scroll">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>المعيار</th>
+                                    <th>تكييف مركزي</th>
+                                    <th>تكييف منفصل</th>
+                                    <th>تكييف شباك</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>كفاءة الطاقة</strong></td>
+                                    <td><span class="badge bg-success">ممتاز (95%)</span></td>
+                                    <td><span class="badge bg-primary">جيد (85%)</span></td>
+                                    <td><span class="badge bg-warning">متوسط (70%)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>التوزيع المتوازن</strong></td>
+                                    <td><span class="badge bg-success">ممتاز</span></td>
+                                    <td><span class="badge bg-primary">جيد</span></td>
+                                    <td><span class="badge bg-danger">ضعيف</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>مستوى الضوضاء</strong></td>
+                                    <td><span class="badge bg-success">هادئ جداً</span></td>
+                                    <td><span class="badge bg-primary">هادئ</span></td>
+                                    <td><span class="badge bg-warning">متوسط</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>سهولة التحكم</strong></td>
+                                    <td><span class="badge bg-success">تحكم ذكي</span></td>
+                                    <td><span class="badge bg-primary">تحكم عادي</span></td>
+                                    <td><span class="badge bg-warning">تحكم بسيط</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>تكلفة التركيب</strong></td>
+                                    <td><span class="badge bg-warning">عالية</span></td>
+                                    <td><span class="badge bg-primary">متوسطة</span></td>
+                                    <td><span class="badge bg-success">منخفضة</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>تكلفة التشغيل</strong></td>
+                                    <td><span class="badge bg-success">منخفضة</span></td>
+                                    <td><span class="badge bg-primary">متوسطة</span></td>
+                                    <td><span class="badge bg-warning">عالية</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>صيانة النظام</strong></td>
+                                    <td><span class="badge bg-success">مركزية وسهلة</span></td>
+                                    <td><span class="badge bg-primary">متوسطة</span></td>
+                                    <td><span class="badge bg-warning">متكررة</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>العمر الافتراضي</strong></td>
+                                    <td><span class="badge bg-success">25+ سنة</span></td>
+                                    <td><span class="badge bg-primary">15-20 سنة</span></td>
+                                    <td><span class="badge bg-warning">10-15 سنة</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>جودة الهواء</strong></td>
+                                    <td><span class="badge bg-success">ممتازة</span></td>
+                                    <td><span class="badge bg-primary">جيدة</span></td>
+                                    <td><span class="badge bg-warning">محدودة</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>المرونة في التوسع</strong></td>
+                                    <td><span class="badge bg-success">عالية</span></td>
+                                    <td><span class="badge bg-primary">متوسطة</span></td>
+                                    <td><span class="badge bg-danger">محدودة</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title animate-on-scroll">التقنيات الحديثة والابتكارات</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        أحدث التطورات التقنية في عالم أنظمة التكييف المركزية
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-brain card-icon"></i>
+                        <h3 class="card-title">الذكاء الاصطناعي وتعلم الآلة</h3>
+                        <p class="card-text">
+                            أنظمة التكييف المركزية الحديثة تدمج تقنيات الذكاء الاصطناعي لتحليل أنماط الاستخدام والتنبؤ بالاحتياجات. هذه التقنيات تمكن النظام من التعلم من سلوك المستخدمين وتحسين الأداء تلقائياً.
+                        </p>
+                        <p class="card-text">
+                            النظام قادر على التنبؤ بالأحمال الحرارية، تحسين جداول التشغيل، وتقليل استهلاك الطاقة بنسبة تصل إلى 30% مقارنة بالأنظمة التقليدية.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-wifi card-icon"></i>
+                        <h3 class="card-title">إنترنت الأشياء (IoT)</h3>
+                        <p class="card-text">
+                            ربط جميع مكونات النظام بشبكة ذكية تسمح بالمراقبة والتحكم عن بعد. أجهزة الاستشعار المتقدمة تجمع بيانات مفصلة عن درجة الحرارة، الرطوبة، جودة الهواء، واستهلاك الطاقة.
+                        </p>
+                        <p class="card-text">
+                            هذه البيانات تُحلل في الوقت الفعلي لتحسين الأداء، اكتشاف الأعطال مبكراً، وإجراء الصيانة التنبؤية قبل حدوث المشاكل.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-mobile-alt card-icon"></i>
+                        <h3 class="card-title">التحكم الذكي والتطبيقات</h3>
+                        <p class="card-text">
+                            تطبيقات الهواتف الذكية المتقدمة تتيح للمستخدمين التحكم الكامل في النظام من أي مكان. يمكن ضبط درجات الحرارة، مراقبة استهلاك الطاقة، وتلقي التنبيهات في الوقت الفعلي.
+                        </p>
+                        <p class="card-text">
+                            التطبيقات تدعم التحكم الصوتي، الجدولة الذكية، والتكامل مع أنظمة المنزل الذكي الأخرى مثل الإضاءة والأمان.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-leaf card-icon"></i>
+                        <h3 class="card-title">المبردات الصديقة للبيئة</h3>
+                        <p class="card-text">
+                            استخدام مبردات طبيعية وصديقة للبيئة مثل R-290 (البروبان) و R-744 (ثاني أكسيد الكربون) التي لا تضر بطبقة الأوزون وتقلل من تأثير الاحتباس الحراري.
+                        </p>
+                        <p class="card-text">
+                            هذه المبردات تحقق كفاءة عالية في التبريد مع تقليل البصمة البيئية، مما يجعل الأنظمة أكثر استدامة ومطابقة للمعايير البيئية الدولية.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-sync-alt card-icon"></i>
+                        <h3 class="card-title">تقنية العاكس المتغير (VRF)</h3>
+                        <p class="card-text">
+                            أنظمة التدفق المتغير للمبرد تسمح بالتحكم الدقيق في كمية المبرد المتدفق إلى كل وحدة داخلية، مما يحقق كفاءة استثنائية في استهلاك الطاقة والتحكم في درجة الحرارة.
+                        </p>
+                        <p class="card-text">
+                            هذه التقنية تتيح التدفئة والتبريد المتزامن في مناطق مختلفة من المبنى، مع إمكانية استرداد الحرارة المهدرة وإعادة استخدامها.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-shield-alt card-icon"></i>
+                        <h3 class="card-title">أنظمة التنقية المتقدمة</h3>
+                        <p class="card-text">
+                            تقنيات متطورة لتنقية الهواء تشمل مرشحات HEPA عالية الكفاءة، أنظمة التعقيم بالأشعة فوق البنفسجية، وتقنيات الأيونيزيشن التي تزيل الفيروسات والبكتيريا من الهواء.
+                        </p>
+                        <p class="card-text">
+                            هذه الأنظمة أصبحت أكثر أهمية خاصة بعد جائحة كوفيد-19، حيث تضمن جودة هواء داخلي صحي وآمن لجميع المستخدمين.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economic Benefits -->
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title animate-on-scroll">الفوائد الاقتصادية والتوفير</h2>
+                    <p class="section-subtitle animate-on-scroll">
+                        كيف تحقق أنظمة التكييف المركزية وفورات مالية كبيرة على المدى الطويل
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-coins card-icon text-warning"></i>
+                        <h3 class="card-title">توفير في فواتير الكهرباء</h3>
+                        <p class="card-text">
+                            أنظمة التكييف المركزية تحقق توفيراً يصل إلى 40% في استهلاك الكهرباء مقارنة بالأنظمة المنفصلة. هذا التوفير يتراكم عبر السنوات ليصل إلى مبالغ كبيرة تبرر الاستثمار الأولي.
+                        </p>
+                        <div class="progress-modern">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                        <small class="text-muted">متوسط التوفير السنوي: 40%</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-wrench card-icon text-primary"></i>
+                        <h3 class="card-title">تقليل تكاليف الصيانة</h3>
+                        <p class="card-text">
+                            الصيانة المركزية للنظام تكون أكثر كفاءة وأقل تكلفة من صيانة عدة وحدات منفصلة. كما أن العمر الافتراضي الأطول يقلل من تكاليف الاستبدال.
+                        </p>
+                        <div class="progress-modern">
+                            <div class="progress-bar" style="width: 70%"></div>
+                        </div>
+                        <small class="text-muted">تقليل تكاليف الصيانة: 30%</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="modern-card animate-on-scroll">
+                        <i class="fas fa-home card-icon text-success"></i>
+                        <h3 class="card-title">زيادة قيمة العقار</h3>
+                        <p class="card-text">
+                            المباني المجهزة بأنظمة تكييف مركزية حديثة تحظى بقيمة عقارية أعلى وطلب أكبر في السوق، مما يحقق عائداً جيداً على الاستثمار.
+                        </p>
+                        <div class="progress-modern">
+                            <div class="progress-bar" style="width: 75%"></div>
+                        </div>
+                        <small class="text-muted">زيادة القيمة العقارية: 15-20%</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="modern-card animate-on-scroll">
+                        <h3 class="card-title text-center mb-4">
+                            <i class="fas fa-calculator me-3"></i>
+                            حاسبة التوفير التقديرية
+                        </h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <h4 class="text-primary">السنة الأولى</h4>
+                                    <p class="mb-0">توفير 25% من التكاليف</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <h4 class="text-success">السنة الثالثة</h4>
+                                    <p class="mb-0">استرداد كامل للاستثمار</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <h4 class="text-info">السنة الخامسة</h4>
+                                    <p class="mb-0">أرباح صافية 150%</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="text-center p-3 bg-light rounded">
+                                    <h4 class="text-warning">بعد 10 سنوات</h4>
+                                    <p class="mb-0">توفير تراكمي 400%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h5><i class="fas fa-building me-2"></i>أنظمة التكييف المركزية</h5>
+                    <p>
+                        رائدون في مجال أنظمة التكييف المركزية المتطورة، نقدم حلولاً شاملة للمباني التجارية والسكنية بأعلى معايير الجودة والكفاءة.
+                    </p>
+                    <div class="mt-3">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <span class="ms-2">أكثر من 500 مشروع ناجح</span>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h5><i class="fas fa-cogs me-2"></i>خدماتنا</h5>
+                    <ul>
+                        <li><a href="#">تصميم وتنفيذ الأنظمة</a></li>
+                        <li><a href="#">الصيانة الدورية</a></li>
+                        <li><a href="#">الإصلاحات الطارئة</a></li>
+                        <li><a href="#">الاستشارات الفنية</a></li>
+                        <li><a href="#">التحديث والتطوير</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5><i class="fas fa-industry me-2"></i>القطاعات</h5>
+                    <ul>
+                        <li><a href="#">المباني التجارية</a></li>
+                        <li><a href="#">المستشفيات</a></li>
+                        <li><a href="#">المؤسسات التعليمية</a></li>
+                        <li><a href="#">الفنادق والمنتجعات</a></li>
+                        <li><a href="#">المجمعات السكنية</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h5><i class="fas fa-phone me-2"></i>تواصل معنا</h5>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>المملكة العربية السعودية</li>
+                        <li><i class="fas fa-phone me-2"></i>+966 50 123 4567</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@centralac.com</li>
+                        <li><i class="fas fa-clock me-2"></i>خدمة 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 أنظمة التكييف المركزية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Scroll Animation
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        // Statistics Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-value');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('style').match(/--target:\s*(\d+)/)[1]);
+                const increment = target / 100;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    counter.style.setProperty('--num', Math.floor(current));
+                }, 50);
+            });
+        }
+
+        // Progress Bar Animation
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        }
+
+        // Initialize animations
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', () => {
+            animateOnScroll();
+            setTimeout(animateCounters, 1000);
+            setTimeout(animateProgressBars, 1500);
+        });
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add hover effects to cards
+        document.querySelectorAll('.modern-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-section');
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات الصيانة والإصلاح المتخصصة - الحلول المتكاملة للأجهزة</title>
+    
+    <!-- Bootstrap 5.3 RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #3b82f6;
+            --accent-color: #fbbf24;
+            --success-color: #10b981;
+            --danger-color: #ef4444;
+            --dark-color: #1f2937;
+            --light-color: #f8fafc;
+            --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            --gradient-secondary: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            --gradient-dark: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.15);
+            --shadow-lg: 0 8px 25px rgba(0,0,0,0.2);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.25);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-color);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .hero-section {
+            background: var(--gradient-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.05)" points="0,0 1000,300 1000,1000 0,700"/></svg>');
+            background-size: cover;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .btn-hero {
+            background: var(--gradient-secondary);
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .btn-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+            color: white;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-secondary);
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid #e5e7eb;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--secondary-color);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            background: var(--gradient-secondary);
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .service-description {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .service-features {
+            list-style: none;
+            padding: 0;
+            text-align: right;
+        }
+        
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #374151;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .service-features i {
+            color: var(--success-color);
+            font-size: 0.9rem;
+        }
+        
+        .stats-section {
+            background: var(--gradient-dark);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle fill="rgba(255,255,255,0.05)" cx="200" cy="200" r="100"/><circle fill="rgba(255,255,255,0.03)" cx="800" cy="600" r="150"/><circle fill="rgba(255,255,255,0.04)" cx="500" cy="800" r="80"/></svg>');
+            background-size: cover;
+        }
+        
+        .stat-item {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-secondary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .process-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding: 2rem 0;
+            padding-right: 4rem;
+        }
+        
+        .timeline-item:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            right: 1.5rem;
+            top: 4rem;
+            bottom: -2rem;
+            width: 2px;
+            background: var(--gradient-primary);
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            right: 0.5rem;
+            top: 2rem;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+            z-index: 2;
+        }
+        
+        .timeline-content {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-content:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(-5px);
+        }
+        
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            border: 2px solid #e5e7eb;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--secondary-color);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'الأكثر طلباً';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 5px 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transform: rotate(45deg);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: translateY(-10px) scale(1.07);
+        }
+        
+        .pricing-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .pricing-period {
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+            text-align: right;
+        }
+        
+        .pricing-features li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #f3f4f6;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-features i {
+            color: var(--success-color);
+            font-size: 0.9rem;
+        }
+        
+        .btn-pricing {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .btn-pricing:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            color: white;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-avatar {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #374151;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial-role {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .contact-section {
+            background: var(--light-color);
+            position: relative;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-info {
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            height: 100%;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .form-control, .form-select {
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 12px 15px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+        }
+        
+        .btn-submit {
+            background: var(--gradient-secondary);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .device-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .device-item {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .device-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+        
+        .device-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .device-name {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+        
+        .team-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-8px);
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 3rem;
+            border: 4px solid #e5e7eb;
+        }
+        
+        .team-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .team-role {
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .team-bio {
+            color: #6b7280;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        .quality-badge {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0.5rem;
+        }
+        
+        .footer {
+            background: var(--gradient-dark);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+        
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+        
+        .footer-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.3rem 0;
+        }
+        
+        .footer-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .service-card {
+                margin-bottom: 2rem;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="hero-content fade-in">
+                    <h1 class="hero-title">خبراء صيانة التكييفات بأنواعها</h1>
+                    <p class="hero-subtitle">
+                        نقدم خدمات صيانة متكاملة لأجهزة التكييف المركزية والمنزلية، مع فحص دقيق، تنظيف شامل، وإصلاح الأعطال بأحدث التقنيات وعلى يد فريق هندسي محترف يضمن لك أداء مثالي وراحة دائمة.
+                    </p>
+                    <a href="#services" class="btn-hero">
+                        <i class="fas fa-tools me-2"></i>
+                        تعرف على خدمات الصيانة
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+<section id="services" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title fade-in">خدمات صيانة التكييف</h2>
+                <p class="section-subtitle fade-in">
+                    نقدم مجموعة متكاملة من خدمات صيانة التكييف لضمان كفاءة الأداء وتوفير استهلاك الطاقة والحفاظ على بيئة داخلية مريحة وصحية على مدار العام.
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- خدمة الصيانة الدورية -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h4 class="service-title">صيانة دورية لأجهزة التكييف</h4>
+                    <p class="service-description">
+                        نقدم خدمة الصيانة الدورية للحفاظ على كفاءة تشغيل المكيف، تشمل تنظيف الفلاتر، فحص مستويات الغاز، وفحص أداء الضاغط.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> تنظيف شامل للوحدات الداخلية والخارجية</li>
+                        <li><i class="fas fa-check"></i> فحص تسربات الغاز وضبط مستوياته</li>
+                        <li><i class="fas fa-check"></i> فحص كفاءة التبريد</li>
+                        <li><i class="fas fa-check"></i> تقرير فني مفصل بعد الخدمة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- خدمة الإصلاح -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4 class="service-title">إصلاح أعطال التكييف</h4>
+                    <p class="service-description">
+                        نقدم حلولاً سريعة ودقيقة لإصلاح كافة أنواع الأعطال في أجهزة التكييف، مع توفير ضمان على الخدمة وقطع الغيار المستخدمة.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> تشخيص الأعطال باستخدام أجهزة متقدمة</li>
+                        <li><i class="fas fa-check"></i> إصلاح الضاغط أو استبداله</li>
+                        <li><i class="fas fa-check"></i> معالجة تسربات المياه أو الغاز</li>
+                        <li><i class="fas fa-check"></i> ضمان على الخدمة المقدمة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- قطع غيار -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h4 class="service-title">توفير قطع غيار أصلية</h4>
+                    <p class="service-description">
+                        نوفر قطع غيار أصلية ومعتمدة لمختلف أنواع التكييفات مع ضمان الجودة والتركيب الاحترافي السريع.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> قطع أصلية معتمدة من الشركات المصنعة</li>
+                        <li><i class="fas fa-check"></i> تركيب فوري من قبل فنيين متخصصين</li>
+                        <li><i class="fas fa-check"></i> ضمان على القطع والخدمة</li>
+                        <li><i class="fas fa-check"></i> توفر دائم لمعظم الموديلات</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- العقود -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h4 class="service-title">عقود صيانة سنوية</h4>
+                    <p class="service-description">
+                        نوفر عقود صيانة سنوية مناسبة للمنازل والشركات، تشمل زيارات دورية وصيانة وقائية وإصلاح الأعطال عند الحاجة.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> زيارات صيانة مجدولة على مدار السنة</li>
+                        <li><i class="fas fa-check"></i> خصومات على الإصلاحات وقطع الغيار</li>
+                        <li><i class="fas fa-check"></i> استجابة فورية عند الطوارئ</li>
+                        <li><i class="fas fa-check"></i> تقارير مفصلة بعد كل زيارة</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- الخدمة المنزلية -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h4 class="service-title">خدمة صيانة منزلية</h4>
+                    <p class="service-description">
+                        نوفر خدمة صيانة التكييف في المنزل دون الحاجة لنقل الجهاز، مع فنيين محترفين وأدوات حديثة تضمن أداء مثالي.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> زيارات حسب الموعد المناسب لك</li>
+                        <li><i class="fas fa-check"></i> الخدمة تتم في موقع العميل بالكامل</li>
+                        <li><i class="fas fa-check"></i> صيانة سريعة وآمنة</li>
+                        <li><i class="fas fa-check"></i> لا توجد رسوم انتقال إضافية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- الطوارئ -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h4 class="service-title">صيانة طارئة 24/7</h4>
+                    <p class="service-description">
+                        نلبي طلبات صيانة الطوارئ على مدار الساعة لأي أعطال مفاجئة تؤثر على الراحة أو الأمان، مع استجابة سريعة ومهنية.
+                    </p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> فريق جاهز على مدار الساعة</li>
+                        <li><i class="fas fa-check"></i> استجابة فورية خلال وقت قصير</li>
+                        <li><i class="fas fa-check"></i> تغطية شاملة لجميع المناطق</li>
+                        <li><i class="fas fa-check"></i> خبرة في التعامل مع الأعطال الحرجة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Stats Section -->
+    <section class="stats-section section-padding">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">15000+</span>
+                        <span class="stat-label">جهاز تم إصلاحه</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">معدل رضا العملاء</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">سنة من الخبرة</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">فني متخصص</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="section-title fade-in">لماذا تختار خدمات صيانة التكييف لدينا؟</h2>
+                <p class="section-subtitle fade-in">
+                    نقدم لك تجربة صيانة متكاملة تتميز بالاحترافية والسرعة والدقة، مع ضمان الجودة وراحة البال
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- فنيون متخصصون -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h4 class="feature-title">فنيون مختصون في التكييف</h4>
+                    <p>نمتلك فريق عمل مدرب على أعلى مستوى ومتخصص فقط في صيانة أنظمة التكييف بمختلف أنواعها، لضمان خدمة دقيقة وآمنة.</p>
+                </div>
+            </div>
+
+            <!-- تشخيص حديث -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h4 class="feature-title">تشخيص احترافي للأعطال</h4>
+                    <p>نستخدم أحدث أجهزة الفحص والتشخيص لتحديد سبب المشكلة بدقة وتوفير الوقت والجهد وضمان إصلاحها من أول مرة.</p>
+                </div>
+            </div>
+
+            <!-- ضمان الخدمة -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="feature-title">ضمان على الخدمة والقطع</h4>
+                    <p>جميع خدماتنا تأتي بضمان يصل إلى 12 شهر على الإصلاحات وقطع الغيار، مما يعزز ثقتك بجودة العمل المقدم.</p>
+                </div>
+            </div>
+
+            <!-- سرعة الاستجابة -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h4 class="feature-title">استجابة سريعة وإنجاز فوري</h4>
+                    <p>نستجيب بسرعة وننفذ معظم خدمات الصيانة خلال 24 ساعة، لتعود أجهزتك للعمل بأفضل أداء دون تأخير.</p>
+                </div>
+            </div>
+
+            <!-- تسعير شفاف -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h4 class="feature-title">أسعار مناسبة وواضحة</h4>
+                    <p>نضمن لك أسعار تنافسية وخالية من الرسوم المخفية، مع تسعير مسبق وخيارات متعددة تناسب احتياجاتك.</p>
+                </div>
+            </div>
+
+            <!-- دعم مستمر -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-headphones-alt"></i>
+                    </div>
+                    <h4 class="feature-title">دعم فني بعد الخدمة</h4>
+                    <p>نوفر لك متابعة مجانية بعد الصيانة لمدة 3 أشهر، لتضمن استقرار جهازك واستمرار كفاءته، مع خدمة عملاء على مدار الساعة.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Devices We Service -->
+  <section class="section-padding bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title fade-in">أنواع المكيفات التي نخدمها</h2>
+        <p class="section-subtitle fade-in">
+          نقدم خدمات صيانة احترافية لجميع أنواع أجهزة التكييف لتضمن أداء مثالي وراحة مستمرة على مدار العام
+        </p>
+      </div>
+    </div>
+
+    <div class="device-grid">
+      <div class="device-item fade-in">
+        <i class="fas fa-wind device-icon"></i>
+        <h5 class="device-name">مكيفات الشباك</h5>
+        <p>صيانة شاملة تشمل التنظيف، فحص الغاز، وإصلاح الأعطال الكهربائية والميكانيكية.</p>
+      </div>
+
+      <div class="device-item fade-in">
+        <i class="fas fa-snowflake device-icon"></i>
+        <h5 class="device-name">مكيفات سبليت</h5>
+        <p>فحص دوري، تعبئة فريون، وإصلاح وحدة التبريد أو التحكم لضمان الكفاءة.</p>
+      </div>
+
+      <div class="device-item fade-in">
+        <i class="fas fa-fan device-icon"></i>
+        <h5 class="device-name">مكيفات مركزية</h5>
+        <p>تشخيص احترافي لأنظمة التكييف المركزية وصيانة للمجاري الهوائية والوحدات الداخلية والخارجية.</p>
+      </div>
+
+      <div class="device-item fade-in">
+        <i class="fas fa-warehouse device-icon"></i>
+        <h5 class="device-name">مكيفات تجارية وصناعية</h5>
+        <p>خدمات متقدمة لمكيفات المصانع والمحال التجارية ذات الاستخدام العالي.</p>
+      </div>
+
+      <div class="device-item fade-in">
+        <i class="fas fa-home device-icon"></i>
+        <h5 class="device-name">مكيفات منزلية</h5>
+        <p>خدمة صيانة وتنظيف دورية للمكيفات المنزلية لضمان تبريد مثالي واستهلاك منخفض للطاقة.</p>
+      </div>
+
+      <div class="device-item fade-in">
+        <i class="fas fa-tools device-icon"></i>
+        <h5 class="device-name">أنظمة التبريد والتدفئة</h5>
+        <p>صيانة أجهزة التكييف متعددة الوظائف (بارد/ساخن) مع فحص دقيق لوحدة التحكم والمبادل الحراري.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Process Timeline -->
+  <section class="section-padding bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title fade-in">خطواتنا الاحترافية في صيانة المكيفات</h2>
+        <p class="section-subtitle fade-in">
+          نتبع آلية دقيقة لضمان أفضل أداء للمكيفات بأعلى كفاءة وأقل تكلفة
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="process-timeline">
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="timeline-content">
+              <h5 class="timeline-title">الاتصال وتحديد الموعد</h5>
+              <p>
+                يبدأ الأمر عند تواصلك معنا لتحديد نوع المشكلة أو طلب صيانة دورية.
+                يتم تنسيق موعد الزيارة وفقاً لجدولك بكل مرونة وسرعة.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-icon">
+              <i class="fas fa-search-location"></i>
+            </div>
+            <div class="timeline-content">
+              <h5 class="timeline-title">المعاينة الميدانية والفحص</h5>
+              <p>
+                يقوم الفني المختص بزيارة موقع المكيف وفحص الوحدة الداخلية والخارجية،
+                مع التأكد من نظافة الفلاتر، حالة الفريون، وكفاءة التشغيل.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-icon">
+              <i class="fas fa-file-invoice-dollar"></i>
+            </div>
+            <div class="timeline-content">
+              <h5 class="timeline-title">عرض التكلفة والموافقة</h5>
+              <p>
+                بعد المعاينة، نرسل لك عرض سعر مفصل يشمل أجور الصيانة أو الإصلاح وقطع الغيار إن لزم.
+                لا يتم البدء إلا بعد موافقتك التامة.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-icon">
+              <i class="fas fa-tools"></i>
+            </div>
+            <div class="timeline-content">
+              <h5 class="timeline-title">تنفيذ أعمال الصيانة</h5>
+              <p>
+                يتم تنظيف المكيف بدقة، تعبئة الفريون إذا لزم، إصلاح الأعطال،
+                وتبديل أي قطع تالفة بأخرى أصلية، وكل ذلك بأحدث الأدوات.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <div class="timeline-content">
+              <h5 class="timeline-title">اختبار الأداء النهائي</h5>
+              <p>
+                نقوم بتشغيل المكيف ومراقبة أدائه، قياس كفاءة التبريد،
+                وضبط الإعدادات النهائية للتأكد من أن الجهاز يعمل بأقصى طاقته.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item fade-in">
+            <div class="timeline-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="timeline-content">
+              <h5 class="timeline-title">الضمان والمتابعة</h5>
+              <p>
+                يتم تسليمك تقرير مفصل عن الخدمة المقدمة مع ضمان يشمل الصيانة وقطع الغيار.
+                ونوفر خدمة متابعة مجانية لمدة 3 أشهر لأي استفسار أو دعم فني.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Team Section -->
+   <section class="section-padding bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title fade-in">فريقنا الخبير في صيانة التكييفات</h2>
+        <p class="section-subtitle fade-in">
+          فريق من المهندسين والفنيين المعتمدين بخبرة عميقة في تركيب وصيانة جميع أنواع المكيفات
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="team-card fade-in">
+          <div class="team-avatar">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <h5 class="team-name">المهندس خالد السلمي</h5>
+          <p class="team-role">مدير قسم الصيانة والتشغيل</p>
+          <p class="team-bio">
+            خبرة تزيد عن 18 عامًا في مجال التبريد والتكييف. أشرف على أكثر من 5000 عملية صيانة وتأسيس أنظمة تكييف مركزي ومنزلي، ومعتمد من كبرى شركات المكيفات العالمية.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="team-card fade-in">
+          <div class="team-avatar">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h5 class="team-name">عبدالعزيز الشهري</h5>
+          <p class="team-role">فني صيانة ميداني</p>
+          <p class="team-bio">
+            فني معتمد بخبرة عملية 10 سنوات في صيانة مكيفات سبليت وشباك، يتميز بسرعة التشخيص ودقة التنفيذ. متخصص في تعبئة الفريون وتنظيف الفلاتر وصيانة الضواغط.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="team-card fade-in">
+          <div class="team-avatar">
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <h5 class="team-name">نهى محمد العتيبي</h5>
+          <p class="team-role">مسؤولة جدولة ومتابعة العملاء</p>
+          <p class="team-bio">
+            تدير حجوزات العملاء بكفاءة، وتتابع تنفيذ المهام وضمان رضا العميل بعد الصيانة. تمتلك خبرة ممتازة في دعم العملاء ومتابعة الضمانات والملاحظات الفنية.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Quality & Certifications -->
+ <section class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title fade-in">الجودة والشهادات المعتمدة</h2>
+        <p class="section-subtitle fade-in">
+          نلتزم بأعلى معايير الجودة العالمية في صيانة وتركيب أجهزة التكييف، ونعتمد على شهادات موثوقة لضمان الكفاءة والسلامة
+        </p>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-lg-12">
+        <div class="mb-4">
+          <span class="quality-badge fade-in">ISO 9001:2015</span>
+          <span class="quality-badge fade-in">معتمد من الهيئة السعودية للمواصفات</span>
+          <span class="quality-badge fade-in">عضو الجمعية السعودية للمهندسين</span>
+          <span class="quality-badge fade-in">شهادة السلامة المهنية OHSAS</span>
+          <span class="quality-badge fade-in">معتمد من وزارة الشؤون البلدية</span>
+          <span class="quality-badge fade-in">شهادات معتمدة في صيانة تكييف مركزي</span>
+          <span class="quality-badge fade-in">شهادة R-410A للتبريد الآمن</span>
+          <span class="quality-badge fade-in">شهادة تدريب من شركات التكييف العالمية</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h4 class="feature-title">معايير جودة عالية في الخدمة</h4>
+          <p>
+            نلتزم بتطبيق إجراءات الجودة بدءًا من المعاينة وحتى تسليم المكيف بعد الصيانة. نستخدم أجهزة معايرة متقدمة، ونراعي شروط الصحة والسلامة أثناء التعامل مع أنظمة التبريد.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h4 class="feature-title">فريق معتمد ومدرّب</h4>
+          <p>
+            جميع فنيينا حاصلون على دورات متقدمة من شركات مثل LG، GREE، SAMSUNG، وMITSUBISHI، ويخضعون لاختبارات أداء دورية لضمان الكفاءة في التعامل مع كل أنواع المكيفات.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Pricing Plans -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title fade-in">باقات وعقود الصيانة</h2>
+                    <p class="section-subtitle fade-in">
+                        اختر الباقة التي تناسب احتياجاتك من بين خططنا المرنة والشاملة
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="pricing-card fade-in">
+                        <h4 class="pricing-title">الباقة الأساسية</h4>
+                        <div class="pricing-price">299<small> ريال</small></div>
+                        <div class="pricing-period">لكل عملية إصلاح</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> تشخيص مجاني للعطل</li>
+                            <li><i class="fas fa-check"></i> إصلاح المشكلة الأساسية</li>
+                            <li><i class="fas fa-check"></i> ضمان شهر واحد</li>
+                            <li><i class="fas fa-check"></i> دعم فني لمدة أسبوعين</li>
+                            <li><i class="fas fa-check"></i> تنظيف أساسي للجهاز</li>
+                        </ul>
+                        <a href="#contact" class="btn-pricing">احجز الآن</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="pricing-card featured fade-in">
+                        <h4 class="pricing-title">الباقة المتميزة</h4>
+                        <div class="pricing-price">699<small> ريال</small></div>
+                        <div class="pricing-period">عقد صيانة 6 أشهر</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> صيانة دورية شهرية</li>
+                            <li><i class="fas fa-check"></i> إصلاحات مجانية غير محدودة</li>
+                            <li><i class="fas fa-check"></i> قطع غيار مخفضة 30%</li>
+                            <li><i class="fas fa-check"></i> أولوية في الخدمة</li>
+                            <li><i class="fas fa-check"></i> دعم فني على مدار الساعة</li>
+                            <li><i class="fas fa-check"></i> خدمة منزلية مجانية</li>
+                            <li><i class="fas fa-check"></i> تقارير دورية مفصلة</li>
+                        </ul>
+                        <a href="#contact" class="btn-pricing">احجز الآن</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="pricing-card fade-in">
+                        <h4 class="pricing-title">الباقة الشاملة</h4>
+                        <div class="pricing-price">1299<small> ريال</small></div>
+                        <div class="pricing-period">عقد صيانة سنوي</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> صيانة دورية أسبوعية</li>
+                            <li><i class="fas fa-check"></i> إصلاحات مجانية بلا حدود</li>
+                            <li><i class="fas fa-check"></i> قطع غيار مجانية تماماً</li>
+                            <li><i class="fas fa-check"></i> خدمة طوارئ 24/7</li>
+                            <li><i class="fas fa-check"></i> ترقيات مجانية للنظام</li>
+                            <li><i class="fas fa-check"></i> تأمين ضد التلف</li>
+                            <li><i class="fas fa-check"></i> استبدال مؤقت في حالة الإصلاح</li>
+                            <li><i class="fas fa-check"></i> تدريب مجاني على الاستخدام</li>
+                        </ul>
+                        <a href="#contact" class="btn-pricing">احجز الآن</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+  <section class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h2 class="section-title fade-in">آراء عملائنا الكرام</h2>
+        <p class="section-subtitle fade-in">
+          نفخر بثقة عملائنا في خدمات صيانة المكيفات التي نقدمها بكل احترافية وجودة عالية
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <p class="testimonial-text">
+            "المكيف كان يقطّر ماء ومتوقف عن التبريد، لكن بعد زيارتهم صار يبرد بكفاءة مثل أول يوم! فريق محترف وسريع، وخدمتهم ممتازة."
+          </p>
+          <h6 class="testimonial-author">عبدالله الشمري</h6>
+          <p class="testimonial-role">مهندس ميكانيكا</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <p class="testimonial-text">
+            "اشتركت معهم في عقد صيانة سنوي، كل 3 أشهر يزورونا للفحص والتنظيف. المكيفات تعمل بدون أعطال والحمد لله. التزام عالي وجودة ممتازة."
+          </p>
+          <h6 class="testimonial-author">فاطمة العتيبي</h6>
+          <p class="testimonial-role">مديرة منشأة طبية</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-avatar">
+            <i class="fas fa-user"></i>
+          </div>
+          <p class="testimonial-text">
+            "كان المكيف يصدر صوت مزعج وحرارته ضعيفة. الفني حضر في نفس اليوم، نظّف الوحدة الداخلية وبدّل قطعة، والحين كل شي تمام. أنصح بالتعامل معهم!"
+          </p>
+          <h6 class="testimonial-author">محمد البقمي</h6>
+          <p class="testimonial-role">طالب جامعي</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title fade-in">تواصل معنا واحجز موعدك</h2>
+                    <p class="section-subtitle fade-in">
+                        نحن هنا لخدمتك في أي وقت، تواصل معنا الآن واحصل على استشارة مجانية
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-card fade-in">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="contact-info">
+                                    <h4 style="color: white; margin-bottom: 2rem;">معلومات التواصل</h4>
+                                    
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div>
+                                            <h6>الهاتف</h6>
+                                            <p>+966 11 234 5678<br>+966 50 123 4567</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <h6>البريد الإلكتروني</h6>
+                                            <p>info@maintenance-services.com<br>support@maintenance-services.com</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h6>العنوان</h6>
+                                            <p>شارع الملك فهد، حي العليا<br>الرياض، المملكة العربية السعودية</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="contact-item">
+                                        <div class="contact-icon">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <div>
+                                            <h6>ساعات العمل</h6>
+                                            <p>السبت - الخميس: 8:00 ص - 10:00 م<br>الجمعة: 2:00 ظ - 10:00 م</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <form class="contact-form">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">الاسم الكامل</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">رقم الجوال</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">البريد الإلكتروني</label>
+                                        <input type="email" class="form-control" id="email">
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="device" class="form-label">نوع الجهاز</label>
+                                        <select class="form-select" id="device" required>
+                                            <option value="">اختر نوع الجهاز</option>
+                                            <option value="laptop">لابتوب</option>
+                                            <option value="desktop">كمبيوتر مكتبي</option>
+                                            <option value="mobile">هاتف ذكي</option>
+                                            <option value="tablet">جهاز لوحي</option>
+                                            <option value="tv">تلفزيون</option>
+                                            <option value="printer">طابعة</option>
+                                            <option value="other">أخرى</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="problem" class="form-label">وصف المشكلة</label>
+                                        <textarea class="form-control" id="problem" rows="4" placeholder="اكتب وصفاً مفصلاً للمشكلة التي تواجهها..."></textarea>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label for="service" class="form-label">نوع الخدمة المطلوبة</label>
+                                        <select class="form-select" id="service">
+                                            <option value="">اختر نوع الخدمة</option>
+                                            <option value="repair">إصلاح فوري</option>
+                                            <option value="maintenance">صيانة دورية</option>
+                                            <option value="contract">عقد صيانة</option>
+                                            <option value="consultation">استشارة فنية</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <button type="submit" class="btn-submit w-100">
+                                        <i class="fas fa-paper-plane me-2"></i>
+                                        إرسال الطلب
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="footer-title">خدمات الصيانة والإصلاح</h5>
+                    <p style="color: rgba(255,255,255,0.8); line-height: 1.6;">
+                        نحن مركز متخصص في صيانة وإصلاح جميع أنواع المكيفات المنزلية بأعلى معايير الجودة والاحترافية. نسعى لتقديم أفضل الخدمات لعملائنا الكرام.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">خدماتنا</h5>
+                    <a href="#" class="footer-link">صيانة دورية</a>
+                    <a href="#" class="footer-link">إصلاحات سريعة</a>
+                    <a href="#" class="footer-link">قطع غيار أصلية</a>
+                    <a href="#" class="footer-link">عقود صيانة</a>
+                    <a href="#" class="footer-link">خدمة منزلية</a>
+                    <a href="#" class="footer-link">دعم فني</a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">روابط مهمة</h5>
+                    <a href="#" class="footer-link">من نحن</a>
+                    <a href="#" class="footer-link">سياسة الخصوصية</a>
+                    <a href="#" class="footer-link">شروط الخدمة</a>
+                    <a href="#" class="footer-link">الضمان والإرجاع</a>
+                    <a href="#" class="footer-link">الأسئلة الشائعة</a>
+                    <a href="#" class="footer-link">الوظائف</a>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-title">النشرة الإخبارية</h5>
+                    <p style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
+                        اشترك في نشرتنا الإخبارية للحصول على آخر العروض والنصائح التقنية
+                    </p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="بريدك الإلكتروني">
+                        <button class="btn" style="background: var(--accent-color); color: white;" type="button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <hr style="border-color: rgba(255,255,255,0.2); margin: 2rem 0 1rem;">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p style="color: rgba(255,255,255,0.6); margin: 0;">
+                        © 2024 خدمات الصيانة والإصلاح. جميع الحقوق محفوظة.
+                    </p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <p style="color: rgba(255,255,255,0.6); margin: 0;">
+                        تم التطوير بواسطة فريق التقنيات المتقدمة
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission handling
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message (you can replace this with actual form submission)
+            alert('تم إرسال طلبك بنجاح! سنتواصل معك خلال 24 ساعة.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add pulse animation to hero button
+        document.querySelector('.btn-hero').classList.add('pulse');
+
+        // Counter animation for stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace(/[^0-9]/g, ''));
+                const increment = target / 50;
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = counter.textContent.replace(/[0-9]+/, target);
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = counter.textContent.replace(/[0-9]+/, Math.floor(current));
+                    }
+                }, 40);
+            });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            const statsObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            statsObserver.observe(statsSection);
+        }
+
+        // Add hover effects to cards
+        document.querySelectorAll('.service-card, .feature-card, .team-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
