@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بشاير الخير لنقل الأثاث - شريكك الموثوق في كل خطوة</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2c5aa0;
+            --secondary-color: #f39c12;
+            --accent-color: #27ae60;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --white-color: #ffffff;
+            --text-color: #34495e;
+            --border-color: #bdc3c7;
+        }
+        
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color );
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+        
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+        }
+        
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: var(--text-color) !important;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: var(--primary-color) !important;
+            transform: translateY(-2px);
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="1" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain )"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-hero {
+            background: var(--secondary-color);
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin: 10px;
+        }
+        
+        .btn-hero:hover {
+            background: #e67e22;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            color: white;
+        }
+        
+        .btn-outline-hero {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        
+        .btn-outline-hero:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--white-color);
+            padding: 60px 0;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            margin-bottom: 20px;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+            background: var(--white-color);
+        }
+        
+        .content-section:nth-child(even) {
+            background: var(--light-color);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 3rem;
+            opacity: 0.8;
+        }
+        
+        /* Cards */
+        .service-card {
+            background: var(--white-color);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: all 0.6s ease;
+        }
+        
+        .service-card:hover::before {
+            left: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+        
+        .service-card h5 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        /* Process Steps */
+        .process-step {
+            background: var(--white-color);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .process-step:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .process-step h6 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 10px;
+        }
+        
+        .process-step p {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        /* Image containers */
+        .image-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .image-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: all 0.3s ease;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .contact-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.15);
+        }
+        
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .contact-card h5 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .contact-card p {
+            margin: 0;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer h5 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+            padding-top: 30px;
+            text-align: center;
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .btn-hero, .btn-outline-hero {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+        
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+        
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .scroll-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="bi bi-truck me-2"></i>
+                بشاير الخير لنقل الأثاث
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#process">مراحل العمل</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#areas">مناطق الخدمة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why-us">لماذا نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">اتصل بنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="hero-content fade-in">
+                        <h1 class="hero-title">بشاير الخير لنقل الأثاث</h1>
+                        <p class="hero-subtitle">
+                            شريكك الموثوق في كل خطوة - خبرة 10 سنوات في نقل العفش بأمان وضمان عدم التلف
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="tel:+96590905157" class="btn btn-hero">
+                                <i class="bi bi-telephone-fill me-2"></i>
+                                اتصل الآن
+                            </a>
+                            <a href="https://wa.me/96590905157" class="btn btn-outline-hero" target="_blank">
+                                <i class="bi bi-whatsapp me-2"></i>
+                                واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="image-container fade-in">
+                        <img src="JaypMz1oKfhv.jpg" alt="نقل عفش احترافي" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">10+</span>
+                        <p>سنوات من الخبرة</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">24/7</span>
+                        <p>خدمة على مدار الساعة</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">100%</span>
+                        <p>ضمان عدم التلف</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-item fade-in">
+                        <span class="stat-number">6</span>
+                        <p>محافظات نخدمها</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title fade-in">خدماتنا الشاملة</h2>
+                    <p class="section-subtitle fade-in">حلول متكاملة لراحة بالك</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <h5>نقل الأثاث الاحترافي</h5>
+                        <p>خدمة نقل آمنة وسريعة داخل جميع مناطق الكويت مع سيارات مجهزة خصيصاً وضمان سلامة الأثاث</p>
+                        <div class="image-container mt-3">
+                            <img src="spRaqSYKTJWD.jpg" alt="نقل أثاث احترافي" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <h5>تغليف الأثاث</h5>
+                        <p>تغليف جميع أنواع الأثاث باستخدام مواد عالية الجودة لضمان الحماية الكاملة أثناء النقل</p>
+                        <div class="image-container mt-3">
+                            <img src="YLoiEEUo4fkO.jpg" alt="تغليف أثاث" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h5>فك وتركيب الأثاث</h5>
+                        <p>فريق متخصص من النجارين والفنيين لفك وتركيب جميع أنواع الأثاث والمطابخ باحترافية عالية</p>
+                        <div class="image-container mt-3">
+                            <img src="eOp2w1nxxLbX.jpg" alt="فك وتركيب أثاث" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h5>تخزين الأثاث</h5>
+                        <p>مستودعات آمنة ونظيفة لتخزين الأثاث مع مراقبة على مدار الساعة وحماية من العوامل الجوية</p>
+                        <div class="image-container mt-3">
+                            <img src="84kedifaeNI6.jpg" alt="تخزين أثاث" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title fade-in">مراحل العمل</h2>
+                    <p class="section-subtitle fade-in">دليل خطوات نقل العفش بشكل احترافي</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step fade-in">
+                        <div class="step-number">1</div>
+                        <h6>التواصل وطلب الخدمة</h6>
+                        <p>اتصل بنا عبر الهاتف أو الواتساب للحصول على عرض سعر فوري</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step fade-in">
+                        <div class="step-number">2</div>
+                        <h6>المعاينة وتحديد المتطلبات</h6>
+                        <p>معاينة شاملة للأثاث لتحديد متطلبات النقل والتغليف</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step fade-in">
+                        <div class="step-number">3</div>
+                        <h6>تحديد موعد النقل</h6>
+                        <p>مرونة في تحديد المواعيد مع خدمة 24 ساعة</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step fade-in">
+                        <div class="step-number">4</div>
+                        <h6>فك وتغليف الأثاث</h6>
+                        <p>فك احترافي وتغليف آمن باستخدام أفضل المواد</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step fade-in">
+                        <div class="step-number">5</div>
+                        <h6>نقل العفش بأمان</h6>
+                        <p>نقل آمن بسيارات مجهزة ومغلقة مع تأمين ضد الكسر</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step fade-in">
+                        <div class="step-number">6</div>
+                        <h6>التوصيل إلى جميع المناطق</h6>
+                        <p>توصيل إلى جميع محافظات الكويت في الوقت المحدد</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step fade-in">
+                        <div class="step-number">7</div>
+                        <h6>تركيب الأثاث</h6>
+                        <p>إعادة تركيب الأثاث في الموقع الجديد بدقة واحترافية</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step fade-in">
+                        <div class="step-number">8</div>
+                        <h6>خدمات التخزين (اختياري )</h6>
+                        <p>حلول تخزين مرنة في مستودعات آمنة ونظيفة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas Section -->
+    <section id="areas" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title fade-in">مناطق الخدمة</h2>
+                    <p class="section-subtitle fade-in">نصل إليك أينما كنت في الكويت</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5>محافظة العاصمة</h5>
+                        <p>مدينة الكويت، الدسمة، الدعية، المنصورية، عبد الله السالم، النزهة، الفيحاء، الشامية، الروضة، العديلية، الخالدية، كيفان، القادسية، قرطبة، السرة، اليرموك، الشويخ، الري، غرناطة، الصليبيخات، الدوحة، النهضة، القيروان</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5>محافظة حولي</h5>
+                        <p>حولي، السالمية، الرميثية، سلوى، بيان، مشرف، البدع، الشعب، الجابرية، جنوب السرة (الصديق، حطين، السلام، الشهداء)</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5>محافظة الفروانية</h5>
+                        <p>الفروانية، خيطان، الأندلس، الرابية، العمرية، الرقعي، الرحاب، إشبيلية، جليب الشيوخ، الضجيج، الشدادية، صباح الناصر، عبد الله المبارك، الضاحية</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5>محافظة الأحمدي</h5>
+                        <p>الأحمدي، الفنطاس، العقيلة، الظهر، الرقة، هدية، المنقف، الفحيحيل، أبو حليفة، الصباحية، ميناء عبد الله، الوفرة، الزور، الخيران، علي صباح السالم، صباح الأحمد</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5>محافظة الجهراء</h5>
+                        <p>الجهراء، تيماء، النعيم، القصر، الواحة، العيون، النسيم، الصليبية، كاظمة، سعد العبد الله، المطلاع، كبد، الروضتين، الصبية</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <h5>محافظة مبارك الكبير</h5>
+                        <p>مبارك الكبير، العدان، القصور، القرين، صباح السالم، المسيلة، أبو فطيرة، صبحان، الفنيطيس، المسايل</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title fade-in">لماذا تختار بشاير الخير؟</h2>
+                    <p class="section-subtitle fade-in">مزايا تنافسية تضمن لك الأفضل</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                        <h5>خبرة 10 سنوات</h5>
+                        <p>خبرة طويلة في مجال نقل العفش مكنتنا من فهم جميع تعقيدات العملية وتطوير أفضل الممارسات</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                        <h5>فريق محترف ومدرب</h5>
+                        <p>نخبة من النجارين والفنيين المدربين على أحدث تقنيات فك وتغليف ونقل وتركيب الأثاث</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-shield-check-fill"></i>
+                        </div>
+                        <h5>ضمان عدم التلف</h5>
+                        <p>نقدم ضماناً كاملاً بعدم تلف ممتلكاتك أثناء عملية النقل مع تحمل المسؤولية الكاملة</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <h5>خدمة 24 ساعة</h5>
+                        <p>نقدم خدمة نقل عفش على مدار الساعة طوال أيام الأسبوع بما في ذلك العطلات الرسمية</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-currency-dollar"></i>
+                        </div>
+                        <h5>أسعار تنافسية</h5>
+                        <p>نقدم خدمات نقل عفش بأسعار تنافسية مع الحفاظ على أعلى مستويات الجودة والاحترافية</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h5>خدمة عملاء ممتازة</h5>
+                        <p>دعم متواصل قبل وأثناء وبعد عملية النقل مع فريق خدمة عملاء متاح دائماً</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-title text-white fade-in">اتصل بنا</h2>
+                    <p class="section-subtitle text-white fade-in">نحن هنا لخدمتك على مدار الساعة</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card fade-in">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <h5>الهاتف</h5>
+                        <p>+965 90905157</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card fade-in">
+                        <div class="contact-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <h5>واتساب</h5>
+                        <p>+965 90905157</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card fade-in">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h5>البريد الإلكتروني</h5>
+                        <p>info@bashir-mover.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="contact-card fade-in">
+                        <div class="contact-icon">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                        <h5>الموقع الإلكتروني</h5>
+                        <p><a href="https://www.bashir-mover.com/" target="_blank" class="text-white">www.bashir-mover.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>
+                        <i class="bi bi-truck me-2"></i>
+                        بشاير الخير لنقل الأثاث
+                    </h5>
+                    <p class="text-light">
+                        شريكك الموثوق في كل خطوة. نقدم خدمات نقل العفش الاحترافية في جميع مناطق الكويت بخبرة تزيد عن 10 سنوات.
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>خدماتنا</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#services">نقل الأثاث</a></li>
+                        <li class="mb-2"><a href="#services">تغليف العفش</a></li>
+                        <li class="mb-2"><a href="#services">فك وتركيب الأثاث</a></li>
+                        <li class="mb-2"><a href="#services">تخزين الأثاث</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>روابط مهمة</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#process">مراحل العمل</a></li>
+                        <li class="mb-2"><a href="#areas">مناطق الخدمة</a></li>
+                        <li class="mb-2"><a href="#why-us">لماذا نحن</a></li>
+                        <li class="mb-2"><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="text-light mb-0">&copy; 2025 بشاير الخير لنقل الأثاث. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top" onclick="scrollToTop( )">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]' ).forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255,255,255,0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.15)';
+            } else {
+                navbar.style.background = 'rgba(255,255,255,0.95)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Scroll to top button
+        const scrollTopBtn = document.querySelector('.scroll-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Add hover effects to service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add click effects to buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                let ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+                
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+                
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+    </script>
+</body>
+</html>
