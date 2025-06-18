@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تكييفات السبليت - الحل الأمثل للتبريد المنزلي والمكتبي</title>
+    <meta name="description" content="دليل شامل لتكييفات السبليت يشمل المميزات، الأنواع، النصائح، والمقارنات مع تصميم احترافي">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        :root {
+            --primary-color: #2c5aa0;
+            --secondary-color: #34d399;
+            --accent-color: #f59e0b;
+            --dark-color: #1f2937;
+            --light-color: #f8fafc;
+            --gradient-primary: linear-gradient(135deg, #2c5aa0 0%, #1e40af 100%);
+            --gradient-secondary: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+            --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            overflow-x: hidden;
+            background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes rotateIn {
+            from {
+                opacity: 0;
+                transform: rotate(-10deg) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-fadeInLeft {
+            animation: fadeInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-fadeInRight {
+            animation: fadeInRight 0.8s ease-out forwards;
+        }
+
+        .animate-scaleIn {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+
+        .animate-rotateIn {
+            animation: rotateIn 0.8s ease-out forwards;
+        }
+
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .fade-in-card {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .fade-in-card:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in-card:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in-card:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in-card:nth-child(4) { animation-delay: 0.4s; }
+
+        /* Header Styles */
+        .navbar {
+            backdrop-filter: blur(10px);
+            background: rgba(44, 90, 160, 0.95) !important;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+            transform: translateY(-2px);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: var(--secondary-color);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: var(--gradient-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"%3E%3Cpolygon fill="rgba(255,255,255,0.05)" points="0,0 1000,300 1000,1000 0,700"/%3E%3C/svg%3E') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            display: block;
+            color: var(--secondary-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6b7280;
+            font-size: 1.1rem;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Card Styles */
+        .feature-card, .ac-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            height: 100%;
+            box-shadow: var(--shadow-light);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before, .ac-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover, .ac-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .feature-card:hover::before, .ac-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--gradient-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .card-description {
+            color: #6b7280;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .card-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .card-features li {
+            padding: 0.5rem 0;
+            color: #4b5563;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-features i {
+            width: 20px;
+        }
+
+        .btn-card {
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50px;
+            padding: 0.8rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-card:hover {
+            background: var(--gradient-secondary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            margin: 2rem 0;
+        }
+
+        .comparison-table table {
+            margin: 0;
+        }
+
+        .comparison-table th {
+            background: var(--gradient-primary);
+            color: white;
+            font-weight: 600;
+            padding: 1.5rem 1rem;
+            border: none;
+        }
+
+        .comparison-table td {
+            padding: 1.2rem 1rem;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: middle;
+        }
+
+        .comparison-table tr:hover {
+            background: #f8fafc;
+        }
+
+        /* Technical Specs */
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .spec-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-light);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .spec-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .spec-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .spec-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .spec-value {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-light);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: right;
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            background: #f8fafc;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: #6b7280;
+            line-height: 1.7;
+            display: none;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e5e7eb;
+            z-index: 1;
+        }
+
+        .process-step {
+            background: white;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: scale(1.1);
+        }
+
+        .process-step.active {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .step-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-title {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Price Cards */
+        .price-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-card.featured {
+            transform: scale(1.05);
+            border: 3px solid var(--secondary-color);
+        }
+
+        .price-card.featured::before {
+            content: 'الأكثر شعبية';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 3rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transform: rotate(45deg);
+        }
+
+        .price-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .price-card.featured:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        .price-unit {
+            font-size: 1rem;
+            color: #6b7280;
+        }
+
+        /* Maintenance Tips */
+        .maintenance-tip {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-light);
+            border-right: 4px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .maintenance-tip:hover {
+            transform: translateX(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .tip-icon {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            float: right;
+        }
+
+        .tip-title {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-description {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-right: 3rem;
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-light);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--gradient-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .benefit-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            padding: 0.3rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--secondary-color);
+            transform: translateX(-5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .process-steps::before {
+                display: none;
+            }
+            
+            .spec-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Utility Classes */
+        .text-gradient {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(circle at 1px 1px, rgba(44, 90, 160, 0.15) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+
+        .section-divider {
+            height: 80px;
+            background: linear-gradient(to right, transparent, var(--secondary-color), transparent);
+            margin: 4rem 0;
+            position: relative;
+        }
+
+        .section-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        /* Content Sections Styling */
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .content-section:nth-child(even) {
+            background: rgba(248, 250, 252, 0.5);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border: 2px solid #f59e0b;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: '💡';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #f59e0b;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            border: 2px solid #ef4444;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .warning-box::before {
+            content: '⚠️';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #ef4444;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .success-box {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            border: 2px solid #10b981;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .success-box::before {
+            content: '✅';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #10b981;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand animate-fadeInLeft" href="#">
+                <i class="fas fa-snowflake me-2"></i>
+                تكييفات السبليت
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">المميزات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#types">الأنواع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#technical">المعلومات التقنية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#maintenance">الصيانة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comparison">مقارنات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#installation">التركيب</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">الأسئلة الشائعة</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <h1 class="hero-title animate-fadeInUp">
+                            تكييفات السبليت
+                            <span class="text-gradient">الحل الأمثل</span>
+                        </h1>
+                        <p class="hero-subtitle animate-fadeInUp">
+                            اكتشف عالم التبريد المتطور مع تكييفات السبليت، التي تجمع بين الكفاءة العالية في استهلاك الطاقة والأداء المتميز والتصميم العصري. نقدم لك دليلاً شاملاً يحتوي على كل ما تحتاج معرفته حول أنظمة التكييف المنفصلة، من المميزات والأنواع إلى نصائح الصيانة والتركيب المحترف.
+                        </p>
+                        <div class="hero-stats animate-fadeInUp">
+                            <div class="stat-item">
+                                <span class="stat-number animate-pulse">90%</span>
+                                <span class="stat-label">كفاءة الطاقة</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number animate-pulse">15</span>
+                                <span class="stat-label">سنة ضمان</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number animate-pulse">24/7</span>
+                                <span class="stat-label">خدمة العملاء</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number animate-pulse">99%</span>
+                                <span class="stat-label">رضا العملاء</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center animate-rotateIn">
+                        <i class="fas fa-home" style="font-size: 15rem; color: rgba(255,255,255,0.1);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="content-section">
+        <div class="container">
+            <h2 class="section-title animate-scaleIn">
+                لماذا تختار تكييفات السبليت؟
+            </h2>
+            <p class="section-subtitle animate-fadeInUp">
+                تكييفات السبليت تمثل الخيار الأمثل للتبريد المنزلي والمكتبي بفضل مميزاتها المتعددة وتقنياتها المتطورة
+            </p>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card fade-in-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-leaf card-icon"></i>
+                        </div>
+                        <h4 class="card-title">كفاءة عالية في الطاقة</h4>
+                        <p class="card-description">
+                            تتميز تكييفات السبليت بتصنيف طاقة عالي يصل إلى A+++، مما يوفر حتى 40% من استهلاك الكهرباء مقارنة بالأنظمة التقليدية. تستخدم تقنيات الضاغط العاكس (Inverter) التي تتحكم في سرعة الدوران حسب الحاجة، مما يقلل من التشغيل والإيقاف المتكرر ويحافظ على درجة حرارة ثابتة.
+                        </p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check text-success"></i> توفير يصل إلى 40% في فاتورة الكهرباء</li>
+                            <li><i class="fas fa-check text-success"></i> تقنية الضاغط العاكس المتطورة</li>
+                            <li><i class="fas fa-check text-success"></i> تصنيف طاقة A+++ معتمد دولياً</li>
+                            <li><i class="fas fa-check text-success"></i> عمر تشغيلي أطول للوحدة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card fade-in-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-volume-down card-icon"></i>
+                        </div>
+                        <h4 class="card-title">تشغيل هادئ ومريح</h4>
+                        <p class="card-description">
+                            تعمل تكييفات السبليت بصوت منخفض جداً لا يتجاوز 19 ديسيبل، مما يجعلها مثالية لغرف النوم والمكاتب. التصميم المنفصل يضع الوحدة الصاخبة (الضاغط) خارج المبنى، بينما الوحدة الداخلية تعمل بصمت تام تقريباً.
+                        </p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check text-success"></i> مستوى ضوضاء أقل من 19 ديسيبل</li>
+                            <li><i class="fas fa-check text-success"></i> الوحدة الخارجية معزولة صوتياً</li>
+                            <li><i class="fas fa-check text-success"></i> مثالي لغرف النوم والدراسة</li>
+                            <li><i class="fas fa-check text-success"></i> تقنية امتصاص الاهتزازات</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card fade-in-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-palette card-icon"></i>
+                        </div>
+                        <h4 class="card-title">تصميم أنيق وعصري</h4>
+                        <p class="card-description">
+                            تأتي الوحدات الداخلية بتصاميم عصرية وألوان متنوعة تتناسب مع أي ديكور داخلي. حجم مدمج وأشكال انسيابية تضيف لمسة جمالية للمكان بدلاً من إفساد المظهر العام للغرفة.
+                        </p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check text-success"></i> ألوان وتصاميم متنوعة</li>
+                            <li><i class="fas fa-check text-success"></i> حجم مدمج لا يشغل مساحة كبيرة</li>
+                            <li><i class="fas fa-check text-success"></i> شاشة LED أنيقة وواضحة</li>
+                            <li><i class="fas fa-check text-success"></i> خامات عالية الجودة ومقاومة للصدأ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card fade-in-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-mobile-alt card-icon"></i>
+                        </div>
+                        <h4 class="card-title">تحكم ذكي متطور</h4>
+                        <p class="card-description">
+                            يأتي مع ريموت كنترول ذكي يتيح التحكم في جميع الوظائف، بالإضافة إلى إمكانية التحكم عبر تطبيقات الهاتف الذكي والأوامر الصوتية. برمجة زمنية متقدمة وأوضاع تشغيل متعددة.
+                        </p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check text-success"></i> تطبيق هاتف ذكي للتحكم عن بُعد</li>
+                            <li><i class="fas fa-check text-success"></i> دعم الأوامر الصوتية (Alexa, Google)</li>
+                            <li><i class="fas fa-check text-success"></i> برمجة زمنية أسبوعية</li>
+                            <li><i class="fas fa-check text-success"></i> وضع النوم الذكي</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card fade-in-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-shield-alt card-icon"></i>
+                        </div>
+                        <h4 class="card-title">أمان وحماية متقدمة</h4>
+                        <p class="card-description">
+                            نظام حماية شامل يتضمن حماية من انقطاع الكهرباء، وحماية من التسريب، وتنظيف ذاتي للوحدة الداخلية، بالإضافة إلى فلاتر هواء متطورة تنقي الهواء من الأتربة والبكتيريا والروائح.
+                        </p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check text-success"></i> حماية من تقلبات الكهرباء</li>
+                            <li><i class="fas fa-check text-success"></i> نظام تنظيف ذاتي</li>
+                            <li><i class="fas fa-check text-success"></i> فلاتر HEPA لتنقية الهواء</li>
+                            <li><i class="fas fa-check text-success"></i> حماية من تسرب غاز التبريد</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card fade-in-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-thermometer-half card-icon"></i>
+                        </div>
+                        <h4 class="card-title">تحكم دقيق في درجة الحرارة</h4>
+                        <p class="card-description">
+                            إمكانية ضبط درجة الحرارة بدقة 0.5 درجة مئوية، مع توزيع متجانس للهواء في جميع أنحاء الغرفة. تقنية الاستشعار الذكي تكتشف وجود الأشخاص وتوجه الهواء بعيداً عنهم لتجنب التيارات الباردة المباشرة.
+                        </p>
+                        <ul class="card-features">
+                            <li><i class="fas fa-check text-success"></i> دقة ضبط ±0.5 درجة مئوية</li>
+                            <li><i class="fas fa-check text-success"></i> توزيع متجانس للهواء</li>
+                            <li><i class="fas fa-check text-success"></i> استشعار وجود الأشخاص</li>
+                            <li><i class="fas fa-check text-success"></i> توجيه تلقائي لتيار الهواء</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box animate-fadeInUp">
+                <h5 style="color: #92400e; font-weight: 600; margin-bottom: 1rem;">
+                    <i class="fas fa-lightbulb me-2"></i>
+                    نصيحة الخبراء
+                </h5>
+                <p style="color: #92400e; margin: 0; line-height: 1.7;">
+                    للحصول على أفضل كفاءة من تكييف السبليت، احرص على اختيار القدرة المناسبة لحجم الغرفة. القاعدة العامة هي 600-700 وات لكل متر مربع في المناطق الحارة، و400-500 وات في المناطق المعتدلة. الاختيار الصحيح للقدرة يضمن أداءً مثالياً وتوفيراً أكبر في استهلاك الكهرباء.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Types Section -->
+    <section id="types" class="content-section bg-pattern">
+        <div class="container">
+            <h2 class="section-title animate-scaleIn">
+                أنواع تكييفات السبليت
+            </h2>
+            <p class="section-subtitle animate-fadeInUp">
+                تعرف على الأنواع المختلفة لتكييفات السبليت واختر الأنسب لاحتياجاتك
+            </p>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="ac-card fade-in-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-home card-icon"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">سبليت عادي (Single Split)</h4>
+                            <p class="card-description">
+                                النوع الأكثر شيوعاً والأنسب للغرف الفردية. يتكون من وحدة داخلية واحدة ووحدة خارجية واحدة. يوفر تحكماً مستقلاً في درجة الحرارة ومثالي للاستخدام المنزلي في غرف النوم وغرف المعيشة والمكاتب الصغيرة.
+                            </p>
+                            <ul class="card-features">
+                                <li><i class="fas fa-check text-success"></i> الأنسب للغرف الفردية (15-50 متر مربع)</li>
+                                <li><i class="fas fa-check text-success"></i> تحكم مستقل في كل غرفة</li>
+                                <li><i class="fas fa-check text-success"></i> أقل تكلفة في التركيب والصيانة</li>
+                                <li><i class="fas fa-check text-success"></i> قدرات متنوعة من 9000 إلى 36000 BTU</li>
+                                <li><i class="fas fa-check text-success"></i> سهولة في التحكم والتشغيل</li>
+                            </ul>
+                            <div class="spec-grid mt-3">
+                                <div class="spec-item">
+                                    <i class="fas fa-bolt spec-icon"></i>
+                                    <div class="spec-title">قدرة التبريد</div>
+                                    <div class="spec-value">9K - 36K BTU</div>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-home spec-icon"></i>
+                                    <div class="spec-title">المساحة المناسبة</div>
+                                    <div class="spec-value">15-50 م²</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-card">
+                                التفاصيل الكاملة
+                                <i class="fas fa-arrow-left ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="ac-card fade-in-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-building card-icon"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">متعدد السبليت (Multi Split)</h4>
+                            <p class="card-description">
+                                نظام متطور يتيح تشغيل عدة وحدات داخلية (2-8 وحدات) من وحدة خارجية واحدة. كل وحدة داخلية تعمل بشكل مستقل مع إمكانية التحكم الفردي في درجة الحرارة. مثالي للمنازل الكبيرة والمكاتب المتعددة الغرف.
+                            </p>
+                            <ul class="card-features">
+                                <li><i class="fas fa-check text-success"></i> وحدة خارجية واحدة لعدة غرف</li>
+                                <li><i class="fas fa-check text-success"></i> توفير في المساحة الخارجية</li>
+                                <li><i class="fas fa-check text-success"></i> تحكم منفصل لكل غرفة</li>
+                                <li><i class="fas fa-check text-success"></i> كفاءة أعلى في استهلاك الطاقة</li>
+                                <li><i class="fas fa-check text-success"></i> أقل تكلفة تشغيلية إجمالية</li>
+                            </ul>
+                            <div class="spec-grid mt-3">
+                                <div class="spec-item">
+                                    <i class="fas fa-layer-group spec-icon"></i>
+                                    <div class="spec-title">عدد الوحدات</div>
+                                    <div class="spec-value">2-8 وحدات</div>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-expand spec-icon"></i>
+                                    <div class="spec-title">المساحة الإجمالية</div>
+                                    <div class="spec-value">حتى 300 م²</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-card">
+                                التفاصيل الكاملة
+                                <i class="fas fa-arrow-left ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="ac-card fade-in-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-snowflake card-icon"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">سبليت عاكس (Inverter Split)</h4>
+                            <p class="card-description">
+                                يستخدم تقنية الضاغط العاكس المتطورة التي تتحكم في سرعة الضاغط حسب الحاجة، مما يوفر حتى 60% من استهلاك الكهرباء. يحافظ على درجة حرارة ثابتة دون تذبذب ويعمل بصوت أهدأ من الأنواع التقليدية.
+                            </p>
+                            <ul class="card-features">
+                                <li><i class="fas fa-check text-success"></i> توفير حتى 60% في استهلاك الكهرباء</li>
+                                <li><i class="fas fa-check text-success"></i> درجة حرارة ثابتة بدون تذبذب</li>
+                                <li><i class="fas fa-check text-success"></i> تشغيل أهدأ وأكثر راحة</li>
+                                <li><i class="fas fa-check text-success"></i> عمر أطول للضاغط</li>
+                                <li><i class="fas fa-check text-success"></i> بداية تشغيل سريعة</li>
+                            </ul>
+                            <div class="spec-grid mt-3">
+                                <div class="spec-item">
+                                    <i class="fas fa-leaf spec-icon"></i>
+                                    <div class="spec-title">توفير الطاقة</div>
+                                    <div class="spec-value">حتى 60%</div>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-volume-down spec-icon"></i>
+                                    <div class="spec-title">مستوى الضوضاء</div>
+                                    <div class="spec-value">أقل من 19 dB</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-card">
+                                التفاصيل الكاملة
+                                <i class="fas fa-arrow-left ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="ac-card fade-in-card">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-wifi card-icon"></i>
+                        </div>
+                        <div class="card-content">
+                            <h4 class="card-title">سبليت ذكي (Smart Split)</h4>
+                            <p class="card-description">
+                                الجيل الأحدث من تكييفات السبليت المزودة بتقنيات الذكاء الاصطناعي وإنترنت الأشياء. يتعلم من عاداتك اليومية ويضبط نفسه تلقائياً، مع إمكانية التحكم عبر الهاتف الذكي والأوامر الصوتية.
+                            </p>
+                            <ul class="card-features">
+                                <li><i class="fas fa-check text-success"></i> تحكم عبر الهاتف الذكي</li>
+                                <li><i class="fas fa-check text-success"></i> دعم الأوامر الصوتية</li>
+                                <li><i class="fas fa-check text-success"></i> تعلم آلي للعادات اليومية</li>
+                                <li><i class="fas fa-check text-success"></i> جدولة ذكية متقدمة</li>
+                                <li><i class="fas fa-check text-success"></i> تشخيص ذاتي للأعطال</li>
+                            </ul>
+                            <div class="spec-grid mt-3">
+                                <div class="spec-item">
+                                    <i class="fas fa-brain spec-icon"></i>
+                                    <div class="spec-title">الذكاء الاصطناعي</div>
+                                    <div class="spec-value">متقدم</div>
+                                </div>
+                                <div class="spec-item">
+                                    <i class="fas fa-mobile-alt spec-icon"></i>
+                                    <div class="spec-title">التحكم الذكي</div>
+                                    <div class="spec-value">WiFi + App</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-card">
+                                التفاصيل الكاملة
+                                <i class="fas fa-arrow-left ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="success-box animate-fadeInUp">
+                <h5 style="color: #065f46; font-weight: 600; margin-bottom: 1rem;">
+                    <i class="fas fa-check-circle me-2"></i>
+                    نصائح للاختيار الأمثل
+                </h5>
+                <div style="color: #065f46; line-height: 1.7;">
+                    <p><strong>للمنازل الصغيرة (1-2 غرفة):</strong> اختر السبليت العادي مع تقنية العاكس للحصول على أفضل كفاءة.</p>
+                    <p><strong>للمنازل المتوسطة (3-5 غرف):</strong> نظام Multi Split يوفر حلاً اقتصادياً ومتكاملاً.</p>
+                    <p><strong>للمنازل الذكية:</strong> السبليت الذكي يتكامل مع أنظمة المنزل الذكي ويوفر راحة استثنائية.</p>
+                    <p><strong>للاستخدام التجاري:</strong> أنظمة Multi Split مع وحدات عالية القدرة هي الخيار الأمثل.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications Section -->
+    <section id="technical" class="content-section">
+        <div class="container">
+            <h2 class="section-title animate-scaleIn">
+                المعلومات والمواصفات التقنية
+            </h2>
+            <p class="section-subtitle animate-fadeInUp">
+                تفاصيل تقنية شاملة تساعدك على فهم كيفية عمل تكييفات السبليت واختيار الأنسب
+            </p>
+
+            <!-- Technical Overview -->
+            <div class="row mb-5">
+                <div class="col-lg-8">
+                    <div class="feature-card animate-fadeInLeft">
+                        <h4 class="card-title mb-4">
+                            <i class="fas fa-cogs me-2" style="color: var(--primary-color);"></i>
+                            مبدأ العمل الأساسي
+                        </h4>
+                        <p style="line-height: 1.8; color: #4b5563; margin-bottom: 2rem;">
+                            تعمل تكييفات السبليت على مبدأ الضغط والتمدد لغاز التبريد (المبرد) في دورة مغلقة. النظام يتكون من وحدتين منفصلتين: الوحدة الداخلية (المبخر) والوحدة الخارجية (المكثف والضاغط). يتم نقل الحرارة من الداخل إلى الخارج عبر دورة التبريد المستمرة.
+                        </p>
+                        
+                        <h5 style="color: var(--primary-color); margin-bottom: 1rem;">مراحل دورة التبريد:</h5>
+                        <ol style="line-height: 1.8; color: #4b5563;">
+                            <li><strong>الضغط:</strong> الضاغط يضغط غاز المبرد البارد ليصبح غازاً ساخناً عالي الضغط</li>
+                            <li><strong>التكثيف:</strong> الغاز الساخن يمر عبر المكثف (الوحدة الخارجية) ويتحول إلى سائل</li>
+                            <li><strong>التمدد:</strong> صمام التمدد يقلل ضغط السائل البارد</li>
+                            <li><strong>التبخر:</strong> السائل البارد يتبخر في المبخر (الوحدة الداخلية) ويمتص الحرارة من الهواء</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="spec-grid">
+                        <div class="spec-item animate-fadeInRight">
+                            <i class="fas fa-thermometer-three-quarters spec-icon"></i>
+                            <div class="spec-title">نطاق التشغيل</div>
+                            <div class="spec-value">-10°C إلى +50°C</div>
+                        </div>
+                        <div class="spec-item animate-fadeInRight">
+                            <i class="fas fa-tint spec-icon"></i>
+                            <div class="spec-title">غاز التبريد</div>
+                            <div class="spec-value">R32 / R410A</div>
+                        </div>
+                        <div class="spec-item animate-fadeInRight">
+                            <i class="fas fa-bolt spec-icon"></i>
+                            <div class="spec-title">الجهد الكهربائي</div>
+                            <div class="spec-value">220V / 380V</div>
+                        </div>
+                        <div class="spec-item animate-fadeInRight">
+                            <i class="fas fa-certificate spec-icon"></i>
+                            <div class="spec-title">تصنيف الطاقة</div>
+                            <div class="spec-value">A++ / A+++</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Specifications Table -->
+            <div class="comparison-table animate-fadeInUp">
+                <h4 class="text-center mb-4" style="color: var(--dark-color); font-weight: 600;">
+                    مقارنة المواصفات التقنية حسب القدرة
+                </h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>القدرة (BTU/h)</th>
+                                <th>المساحة المناسبة (م²)</th>
+                                <th>استهلاك الكهرباء (واط)</th>
+                                <th>معدل التبريد (كيلو واط)</th>
+                                <th>تدفق الهواء (م³/ساعة)</th>
+                                <th>مستوى الضوضاء (ديسيبل)</th>
+                                <th>الوزن (كجم)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>9,000</strong></td>
+                                <td>15-20</td>
+                                <td>850-950</td>
+                                <td>2.6</td>
+                                <td>450</td>
+                                <td>≤22</td>
+                                <td>8-10</td>
+                            </tr>
+                            <tr>
+                                <td><strong>12,000</strong></td>
+                                <td>20-25</td>
+                                <td>1100-1200</td>
+                                <td>3.5</td>
+                                <td>550</td>
+                                <td>≤24</td>
+                                <td>10-12</td>
+                            </tr>
+                            <tr>
+                                <td><strong>18,000</strong></td>
+                                <td>25-35</td>
+                                <td>1650-1750</td>
+                                <td>5.3</td>
+                                <td>750</td>
+                                <td>≤26</td>
+                                <td>12-15</td>
+                            </tr>
+                            <tr>
+                                <td><strong>24,000</strong></td>
+                                <td>35-45</td>
+                                <td>2200-2400</td>
+                                <td>7.0</td>
+                                <td>950</td>
+                                <td>≤28</td>
+                                <td>15-18</td>
+                            </tr>
+                            <tr>
+                                <td><strong>30,000</strong></td>
+                                <td>45-55</td>
+                                <td>2750-3000</td>
+                                <td>8.8</td>
+                                <td>1150</td>
+                                <td>≤30</td>
+                                <td>18-22</td>
+                            </tr>
+                            <tr>
+                                <td><strong>36,000</strong></td>
+                                <td>55-65</td>
+                                <td>3300-3600</td>
+                                <td>10.5</td>
+                                <td>1350</td>
+                                <td>≤32</td>
+                                <td>22-25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Technical Features Grid -->
+            <div class="benefits-grid mt-5">
+                <div class="benefit-item animate-scaleIn">
+                    <div class="benefit-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h5 class="benefit-title">تقنية الضاغط العاكس</h5>
+                    <p class="benefit-description">
+                        يتحكم في سرعة الضاغط باستمرار حسب الحمل المطلوب، مما يوفر الطاقة ويحافظ على درجة حرارة ثابتة. يقلل من التشغيل والإيقاف المتكرر ويطيل عمر النظام.
+                    </p>
+                </div>
+
+                <div class="benefit-item animate-scaleIn">
+                    <div class="benefit-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h5 class="benefit-title">نظام الفلترة المتطور</h5>
+                    <p class="benefit-description">
+                        فلاتر HEPA وفلاتر الكربون المنشط تنقي الهواء من الغبار، حبوب اللقاح، البكتيريا، والروائح الكريهة. بعض الموديلات تحتوي على تقنية البلازما لقتل الفيروسات.
+                    </p>
+                </div>
+
+                <div class="benefit-item animate-scaleIn">
+                    <div class="benefit-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h5 class="benefit-title">توزيع الهواء الذكي</h5>
+                    <p class="benefit-description">
+                        شفرات قابلة للتحكم في اتجاهين (أفقي وعمودي) مع تقنية الاستشعار لتوجيه الهواء بعيداً عن الأشخاص وضمان توزيع متجانس في الغرفة.
+                    </p>
+                </div>
+
+                <div class="benefit-item animate-scaleIn">
+                    <div class="benefit-icon">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h5 class="benefit-title">وضع إزالة الجليد التلقائي</h5>
+                    <p class="benefit-description">
+                        النظام يكتشف تكون الجليد على الوحدة الخارجية تلقائياً ويقوم بإزالته دون تدخل المستخدم، مما يضمن كفاءة مستمرة حتى في الأجواء الباردة.
+                    </p>
+                </div>
+
+                <div class="benefit-item animate-scaleIn">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h5 class="benefit-title">حماية من تقلبات الكهرباء</h5>
+                    <p class="benefit-description">
+                        مثبت جهد مدمج يحمي النظام من تقلبات الكهرباء وانقطاع التيار المفاجئ. إعادة تشغيل تلقائية بنفس الإعدادات السابقة عند عودة الكهرباء.
+                    </p>
+                </div>
+
+                <div class="benefit-item animate-scaleIn">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h5 class="benefit-title">غازات تبريد صديقة للبيئة</h5>
+                    <p class="benefit-description">
+                        استخدام غاز R32 الذي له تأثير أقل على الاحتباس الحراري مقارنة بالغازات التقليدية، مع كفاءة أعلى في التبريد واستهلاك أقل للطاقة.
+                    </p>
+                </div>
+            </div>
+
+            <div class="warning-box animate-fadeInUp">
+                <h5 style="color: #dc2626; font-weight: 600; margin-bottom: 1rem;">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    معلومات مهمة للتركيب
+                </h5>
+                <div style="color: #dc2626; line-height: 1.7;">
+                    <p><strong>المسافة المطلوبة:</strong> يجب ترك مساحة 30 سم على الأقل حول الوحدة الخارجية لضمان التهوية المناسبة.</p>
+                    <p><strong>طول الأنابيب:</strong> الحد الأقصى لطول الأنابيب بين الوحدة الداخلية والخارجية هو 20-30 متر حسب الموديل.</p>
+                    <p><strong>فرق الارتفاع:</strong> الحد الأقصى لفرق الارتفاع بين الوحدتين هو 10-15 متر.</p>
+                    <p><strong>التركيب الكهربائي:</strong> يجب تركيب قاطع كهربائي منفصل ومناسب لقدرة التكييف.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance Section -->
+    <section id="maintenance" class="content-section bg-pattern">
+        <div class="container">
+            <h2 class="section-title animate-scaleIn">
+                دليل الصيانة والعناية
+            </h2>
+            <p class="section-subtitle animate-fadeInUp">
+                نصائح شاملة للحفاظ على تكييف السبليت وضمان أدائه الأمثل لسنوات طويلة
+            </p>
+
+            <!-- Maintenance Types -->
+            <div class="row mb-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="price-card animate-fadeInUp">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-user card-icon"></i>
+                        </div>
+                        <h4 class="card-title">الصيانة الذاتية</h4>
+                        <p class="card-description">أعمال يمكن للمستخدم القيام بها</p>
+                        <div class="price">يومياً</div>
+                        <div class="price-unit">إلى أسبوعياً</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="price-card featured animate-fadeInUp">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-tools card-icon"></i>
+                        </div>
+                        <h4 class="card-title">الصيانة الدورية</h4>
+                        <p class="card-description">صيانة احترافية منتظمة</p>
+                        <div class="price">كل 3-6</div>
+                        <div class="price-unit">أشهر</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="price-card animate-fadeInUp">
+                        <div class="card-icon-wrapper">
+                            <i class="fas fa-wrench card-icon"></i>
+                        </div>
+                        <h4 class="card-title">الصيانة المتخصصة</h4>
+                        <p class="card-description">فحص شامل وإصلاحات</p>
+                        <div class="price">سنوياً</div>
+                        <div class="price-unit">أو عند الحاجة</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Maintenance Tips -->
+            <div class="maintenance-tip animate-fadeInLeft">
+                <i class="fas fa-broom tip-icon"></i>
+                <h5 class="tip-title">تنظيف الفلاتر (أسبوعياً)</h5>
+                <p class="tip-description">
+                    اخرج الفلاتر من الوحدة الداخلية واغسلها بالماء الفاتر والصابون الخفيف. اتركها تجف تماماً قبل إعادة تركيبها. الفلاتر النظيفة تحسن من كفاءة التبريد وجودة الهواء وتقلل من استهلاك الكهرباء بنسبة تصل إلى 15%.
+                </p>
+            </div>
+
+            <div class="maintenance-tip animate-fadeInRight">
+                <i class="fas fa-spray-can tip-icon"></i>
+                <h5 class="tip-title">تنظيف الوحدة الداخلية (شهرياً)</h5>
+                <p class="tip-description">
+                    استخدم قطعة قماش ناعمة ومبللة لتنظيف الغطاء الخارجي والشفرات. لا تستخدم المواد الكيميائية القوية. نظف شفرات توزيع الهواء بعناية لضمان توزيع متجانس. تأكد من إيقاف التيار الكهربائي قبل التنظيف.
+                </p>
+            </div>
+
+            <div class="maintenance-tip animate-fadeInLeft">
+                <i class="fas fa-eye tip-icon"></i>
+                <h5 class="tip-title">فحص التسريبات (شهرياً)</h5>
+                <p class="tip-description">
+                    تحقق من عدم وجود تسريب للماء من الوحدة الداخلية. افحص خرطوم الصرف للتأكد من عدم انسداده. أي تسريب قد يشير إلى مشكلة في نظام الصرف أو انسداد في الأنابيب ويحتاج إلى صيانة فورية.
+                </p>
+            </div>
+
+            <div class="maintenance-tip animate-fadeInRight">
+                <i class="fas fa-wind tip-icon"></i>
+                <h5 class="tip-title">تنظيف الوحدة الخارجية (شهرياً)</h5>
+                <p class="tip-description">
+                    أزل الأوراق والأتربة من حول الوحدة الخارجية. استخدم خرطوم الماء لغسل الزعانف (المبادل الحراري) من الخارج برفق. لا تستخدم ضغط ماء عالي قد يضر بالزعانف الرقيقة. تأكد من إيقاف الكهرباء قبل التنظيف.
+                </p>
+            </div>
+
+            <div class="maintenance-tip animate-fadeInLeft">
+                <i class="fas fa-thermometer tip-icon"></i>
+                <h5 class="tip-title">مراقبة الأداء (يومياً)</h5>
+                <p class="tip-description">
+                    راقب سرعة التبريد وانتظام عمل النظام. إذا لاحظت بطء في التبريد أو أصوات غريبة أو رائحة كريهة، فقد تحتاج إلى صيانة فورية. تحقق من أن ريموت الكنترول يعمل بشكل طبيعي وأن البطاريات في حالة جيدة.
+                </p>
+            </div>
+
+            <div class="maintenance-tip animate-fadeInRight">
+                <i class="fas fa-power-off tip-icon"></i>
+                <h5 class="tip-title">إيقاف التشغيل الصحيح</h5>
+                <p class="tip-description">
+                    لا تفصل الكهرباء مباشرة عن التكييف أثناء التشغيل. استخدم الريموت لإيقاف التشغيل أولاً، ثم انتظر 5 دقائق قبل فصل الكهرباء إذا لزم الأمر. هذا يحمي الضاغط من التلف ويطيل عمر النظام.
+                </p>
+            </div>
+
+            <!-- Professional Maintenance Schedule -->
+            <div class="feature-card animate-fadeInUp mt-5">
+                <h4 class="card-title mb-4">
+                    <i class="fas fa-calendar-alt me-2" style="color: var(--primary-color);"></i>
+                    جدول الصيانة الاحترافية
+                </h4>
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h5 style="color: var(--secondary-color); margin-bottom: 1rem;">الصيانة الفصلية (كل 3 أشهر)</h5>
+                        <ul style="line-height: 1.8; color: #4b5563;">
+                            <li>تنظيف عميق للوحدة الداخلية والخارجية</li>
+                            <li>فحص مستوى غاز التبريد وإضافة إذا لزم الأمر</li>
+                            <li>تنظيف أنابيب الصرف وإزالة الانسدادات</li>
+                            <li>فحص الاتصالات الكهربائية وربطها</li>
+                            <li>تشحيم المحركات والأجزاء المتحركة</li>
+                            <li>معايرة الترموستات والتحكم في درجة الحرارة</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5 style="color: var(--secondary-color); margin-bottom: 1rem;">الصيانة السنوية الشاملة</h5>
+                        <ul style="line-height: 1.8; color: #4b5563;">
+                            <li>فحص شامل للضاغط وأدائه</li>
+                            <li>قياس ضغط غاز التبريد في النظام</li>
+                            <li>فحص عزل الأنابيب وحالة التوصيلات</li>
+                            <li>اختبار جميع أوضاع التشغيل والوظائف</li>
+                            <li>فحص أجهزة الأمان والحماية</li>
+                            <li>تقرير مفصل عن حالة النظام والتوصيات</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Maintenance Cost Analysis -->
+            <div class="comparison-table animate-fadeInUp mt-5">
+                <h4 class="text-center mb-4" style="color: var(--dark-color); font-weight: 600;">
+                    تكلفة الصيانة المتوقعة سنوياً
+                </h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>نوع الصيانة</th>
+                                <th>التكرار</th>
+                                <th>التكلفة الواحدة</th>
+                                <th>التكلفة السنوية</th>
+                                <th>الوصف</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>تنظيف الفلاتر</strong></td>
+                                <td>أسبوعي</td>
+                                <td>مجاني (ذاتي)</td>
+                                <td>0 ريال</td>
+                                <td>تنظيف يقوم به المستخدم</td>
+                            </tr>
+                            <tr>
+                                <td><strong>صيانة أساسية</strong></td>
+                                <td>كل 3 أشهر</td>
+                                <td>80-120 ريال</td>
+                                <td>320-480 ريال</td>
+                                <td>تنظيف وفحص أساسي</td>
+                            </tr>
+                            <tr>
+                                <td><strong>صيانة شاملة</strong></td>
+                                <td>سنوياً</td>
+                                <td>200-300 ريال</td>
+                                <td>200-300 ريال</td>
+                                <td>فحص كامل وإصلاحات</td>
+                            </tr>
+                            <tr>
+                                <td><strong>شحن غاز التبريد</strong></td>
+                                <td>كل 2-3 سنوات</td>
+                                <td>150-250 ريال</td>
+                                <td>50-120 ريال</td>
+                                <td>عند انخفاض مستوى الغاز</td>
+                            </tr>
+                            <tr style="background: #f0f9ff;">
+                                <td><strong>إجمالي التكلفة</strong></td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td><strong>570-900 ريال</strong></td>
+                                <td>تكلفة سنوية متوسطة</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="success-box animate-fadeInUp">
+                <h5 style="color: #065f46; font-weight: 600; margin-bottom: 1rem;">
+                    <i class="fas fa-lightbulb me-2"></i>
+                    فوائد الصيانة المنتظمة
+                </h5>
+                <div style="color: #065f46; line-height: 1.7;">
+                    <p><strong>توفير في الكهرباء:</strong> الصيانة المنتظمة توفر 15-25% من استهلاك الكهرباء سنوياً.</p>
+                    <p><strong>إطالة العمر الافتراضي:</strong> تزيد من عمر التكييف من 8-10 سنوات إلى 12-15 سنة.</p>
+                    <p><strong>تحسين جودة الهواء:</strong> الفلاتر النظيفة تزيل 99% من الملوثات والبكتيريا.</p>
+                    <p><strong>تجنب الأعطال المكلفة:</strong> الاكتشاف المبكر للمشاكل يوفر تكاليف إصلاح باهظة.</p>
+                    <p><strong>الحفاظ على الضمان:</strong> الصيانة المنتظمة شرط للحفاظ على ضمان الشركة المصنعة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="content-section">
+        <div class="container">
+            <h2 class="section-title animate-scaleIn">
+                مقارنات شاملة
+            </h2>
+            <p class="section-subtitle animate-fadeInUp">
+                مقارنات تفصيلية تساعدك على اتخاذ القرار الأنسب لاحتياجاتك
+            </p>
+
+            <!-- Split vs Other Types Comparison -->
+            <div class="comparison-table animate-fadeInUp mb-5">
+                <h4 class="text-center mb-4" style="color: var(--dark-color); font-weight: 600;">
+                    مقارنة تكييفات السبليت مع الأنواع الأخرى
+                </h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>المعيار</th>
+                                <th>تكييف السبليت</th>
+                                <th>تكييف النافذة</th>
+                                <th>التكييف المركزي</th>
+                                <th>التكييف المحمول</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>كفاءة الطاقة</strong></td>
+                                <td style="background: #d1fae5;">ممتازة (A+++)</td>
+                                <td style="background: #fef3c7;">متوسطة (B-C)</td>
+                                <td style="background: #d1fae5;">ممتازة (A++)</td>
+                                <td style="background: #fee2e2;">ضعيفة (C-D)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>مستوى الضوضاء</strong></td>
+                                <td style="background: #d1fae5;">هادئ جداً (19 dB)</td>
+                                <td style="background: #fee2e2;">عالي (45-55 dB)</td>
+                                <td style="background: #d1fae5;">هادئ (25-30 dB)</td>
+                                <td style="background: #fef3c7;">متوسط (35-40 dB)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>سهولة التركيب</strong></td>
+                                <td style="background: #fef3c7;">يحتاج فني متخصص</td>
+                                <td style="background: #d1fae5;">سهل التركيب</td>
+                                <td style="background: #fee2e2;">معقد ومكلف</td>
+                                <td style="background: #d1fae5;">لا يحتاج تركيب</td>
+                            </tr>
+                            <tr>
+                                <td><strong>التكلفة الأولية</strong></td>
+                                <td style="background: #fef3c7;">متوسطة (2000-8000)</td>
+                                <td style="background: #d1fae5;">منخفضة (800-2500)</td>
+                                <td style="background: #fee2e2;">مرتفعة (15000+)</td>
+                                <td style="background: #fef3c7;">متوسطة (1500-4000)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>المرونة في التحكم</strong></td>
+                                <td style="background: #d1fae5;">ممتازة (فردية)</td>
+                                <td style="background: #fef3c7;">محدودة</td>
+                                <td style="background: #d1fae5;">ممتازة (نطاقات)</td>
+                                <td style="background: #fef3c7;">محدودة</td>
+                            </tr>
+                            <tr>
+                                <td><strong>الجمالية</strong></td>
+                                <td style="background: #d1fae5;">أنيقة وعصرية</td>
+                                <td style="background: #fee2e2;">تفسد المظهر</td>
+                                <td style="background: #d1fae5;">غير مرئية</td>
+                                <td style="background: #fef3c7;">متوسطة</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Brand Comparison -->
+            <div class="comparison-table animate-fadeInUp mb-5">
+                <h4 class="text-center mb-4" style="color: var(--dark-color); font-weight: 600;">
+                    مقارنة أشهر ماركات تكييفات السبليت
+                </h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>الماركة</th>
+                                <th>بلد المنشأ</th>
+                                <th>نطاق السعر (ريال)</th>
+                                <th>تصنيف الطاقة</th>
+                                <th>فترة الضمان</th>
+                                <th>المميزات الخاصة</th>
+                                <th>التقييم العام</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>LG</strong></td>
+                                <td>كوريا الجنوبية</td>
+                                <td>2500-7000</td>
+                                <td>A++ / A+++</td>
+                                <td>5-10 سنوات</td>
+                                <td>تقنية Dual Inverter، تطبيق ذكي</td>
+                                <td style="background: #d1fae5;">⭐⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Samsung</strong></td>
+                                <td>كوريا الجنوبية</td>
+                                <td>2800-8000</td>
+                                <td>A++ / A+++</td>
+                                <td>5-10 سنوات</td>
+                                <td>تقنية WindFree، فلاتر متطورة</td>
+                                <td style="background: #d1fae5;">⭐⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Daikin</strong></td>
+                                <td>اليابان</td>
+                                <td>3000-9000</td>
+                                <td>A++ / A+++</td>
+                                <td>3-7 سنوات</td>
+                                <td>تقنية Inverter متقدمة، فلاتر طبية</td>
+                                <td style="background: #d1fae5;">⭐⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Carrier</strong></td>
+                                <td>الولايات المتحدة</td>
+                                <td>2200-6500</td>
+                                <td>A+ / A++</td>
+                                <td>5-8 سنوات</td>
+                                <td>نظام تنقية الهواء، تحكم WiFi</td>
+                                <td style="background: #fef3c7;">⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gree</strong></td>
+                                <td>الصين</td>
+                                <td>1800-4500</td>
+                                <td>A+ / A++</td>
+                                <td>3-6 سنوات</td>
+                                <td>سعر منافس، توفر قطع الغيار</td>
+                                <td style="background: #fef3c7;">⭐⭐⭐⭐</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Midea</strong></td>
+                                <td>الصين</td>
+                                <td>1500-3800</td>
+                                <td>A / A+</td>
+                                <td>3-5 سنوات</td>
+                                <td>أسعار اقتصادية، أداء جيد</td>
+                                <td style="background: #fef3c7;">⭐⭐⭐</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Energy Efficiency Comparison -->
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="feature-card animate-fadeInLeft">
+                        <h4 class="card-title mb-4">
+                            <i class="fas fa-leaf me-2" style="color: var(--secondary-color);"></i>
+                            مقارنة استهلاك الطاقة السنوي
+                        </h4>
+                        <div class="comparison-table">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>تصنيف الطاقة</th>
+                                            <th>استهلاك سنوي (كيلو واط/ساعة)</th>
+                                            <th>التكلفة السنوية (ريال)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="background: #d1fae5;"><strong>A+++</strong></td>
+                                            <td>1200-1500</td>
+                                            <td style="color: #059669; font-weight: 600;">240-300</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background: #dcfce7;"><strong>A++</strong></td>
+                                            <td>1400-1700</td>
+                                            <td style="color: #059669; font-weight: 600;">280-340</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background: #fef3c7;"><strong>A+</strong></td>
+                                            <td>1600-2000</td>
+                                            <td style="color: #d97706; font-weight: 600;">320-400</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="background: #fee2e2;"><strong>A</strong></td>
+                                            <td>1800-2300</td>
+                                            <td style="color: #dc2626; font-weight: 600;">360-460</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <p class="mt-3" style="color: #6b7280; font-size: 0.9rem;">
+                            * الحسابات على أساس تشغيل 8 ساعات يومياً لمدة 6 أشهر في السنة بسعر 0.2 ريال/كيلو واط ساعة
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card animate-fadeInRight">
+                        <h4 class="card-title mb-4">
+                            <i class="fas fa-calculator me-2" style="color: var(--primary-color);"></i>
+                            مقارنة التكلفة الإجمالية (5 سنوات)
+                        </h4>
+                        <div class="comparison-table">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>العنصر</th>
+                                            <th>تكييف اقتصادي</th>
+                                            <th>تكييف متطور</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>سعر الشراء</strong></td>
+                                            <td>2000 ريال</td>
+                                            <td>4000 ريال</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>تكلفة التركيب</strong></td>
+                                            <td>300 ريال</td>
+                                            <td>400 ريال</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>كهرباء (5 سنوات)</strong></td>
+                                            <td>2000 ريال</td>
+                                            <td>1200 ريال</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>صيانة (5 سنوات)</strong></td>
+                                            <td>3000 ريال</td>
+                                            <td>2000 ريال</td>
+                                        </tr>
+                                        <tr style="background: #f0f9ff;">
+                                            <td><strong>إجمالي التكلفة</strong></td>
+                                            <td style="color: #dc2626; font-weight: 600;">7300 ريال</td>
+                                            <td style="color: #059669; font-weight: 600;">7600 ريال</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <p class="mt-3" style="color: #6b7280; font-size: 0.9rem;">
+                            * التكييف المتطور يعوض فرق السعر من خلال توفير الكهرباء وقلة الأعطال
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box animate-fadeInUp">
+                <h5 style="color: #92400e; font-weight: 600; margin-bottom: 1rem;">
+                    <i class="fas fa-chart-line me-2"></i>
+                    تحليل مقارن للعائد على الاستثمار
+                </h5>
+                <div style="color: #92400e; line-height: 1.7;">
+                    <p><strong>الاستثمار في تكييف عالي الكفاءة:</strong> رغم ارتفاع التكلفة الأولية، فإن التوفير في فاتورة الكهرباء وقلة الأعطال يجعل العائد على الاستثمار إيجابياً خلال 2-3 سنوات.</p>
+                    <p><strong>مدة الاسترداد:</strong> الفرق في السعر بين تكييف عادي وآخر عالي الكفاءة يسترد خلال 18-24 شهر من التوفير في فاتورة الكهرباء.</p>
+                    <p><strong>القيمة طويلة المدى:</strong> التكييفات عالية الجودة تحتفظ بقيمتها أكثر وتضيف إلى قيمة العقار عند البيع.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Section -->
+    <section id="installation" class="content-section bg-pattern">
+        <div class="container">
+            <h2 class="section-title animate-scaleIn">
+                دليل التركيب الاحترافي
+            </h2>
+            <p class="section-subtitle animate-fadeInUp">
+                خطوات تفصيلية لتركيب تكييف السبليت بطريقة صحيحة وآمنة
+            </p>
+
+            <!-- Installation Process Steps -->
+            <div class="process-steps animate-fadeInUp">
+                <div class="process-step active">
+                    <div class="step-number">1</div>
+                    <div class="step-title">التخطيط والمسح</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">التحضير والأدوات</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">تركيب الوحدة الداخلية</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">تركيب الوحدة الخارجية</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-title">ربط الأنابيب</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-title">التوصيل الكهربائي</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">7</div>
+                    <div class="step-title">الاختبار والتشغيل</div>
+                </div>
+            </div>
+
+            <!-- Detailed Installation Steps -->
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="maintenance-tip animate-fadeInLeft">
+                        <i class="fas fa-search-location tip-icon"></i>
+                        <h5 class="tip-title">الخطوة 1: التخطيط والمسح الأولي</h5>
+                        <p class="tip-description">
+                            <strong>اختيار الموقع المناسب للوحدة الداخلية:</strong><br>
+                            • على ارتفاع 2-2.5 متر من الأرض<br>
+                            • بعيداً عن مصادر الحرارة والإضاءة المباشرة<br>
+                            • يضمن توزيع الهواء بشكل متجانس<br>
+                            • سهولة الوصول للصيانة<br><br>
+                            
+                            <strong>اختيار موقع الوحدة الخارجية:</strong><br>
+                            • أرض مستوية وثابتة<br>
+                            • تهوية جيدة من جميع الجهات<br>
+                            • بعيداً عن غرف النوم لتجنب الضوضاء<br>
+                            • حماية من العوامل الجوية
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="maintenance-tip animate-fadeInRight">
+                        <i class="fas fa-toolbox tip-icon"></i>
+                        <h5 class="tip-title">الخطوة 2: الأدوات والمعدات المطلوبة</h5>
+                        <p class="tip-description">
+                            <strong>أدوات القطع والثقب:</strong><br>
+                            • مثقاب كهربائي بريش مختلفة الأحجام<br>
+                            • منشار لقطع الأنابيب<br>
+                            • مجموعة مفاتيح ربط<br><br>
+                            
+                            <strong>أدوات القياس والتوصيل:</strong><br>
+                            • مقياس الفولتية (الملتميتر)<br>
+                            • مقياس ضغط الفريون<br>
+                            • ميزان الماء والشريط المتري<br>
+                            • مضخة الفاكيوم لسحب الهواء<br>
+                            • معدات اللحام والتوصيل
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="maintenance-tip animate-fadeInLeft">
+                        <i class="fas fa-home tip-icon"></i>
+                        <h5 class="tip-title">الخطوة 3: تركيب الوحدة الداخلية</h5>
+                        <p class="tip-description">
+                            <strong>تثبيت القاعدة المعدنية:</strong><br>
+                            • قياس وتحديد المواقع بدقة<br>
+                            • ثقب الجدار باستخدام المثقاب<br>
+                            • تثبيت القاعدة بالبراغي والدبل<br>
+                            • التأكد من الاستواء باستخدام ميزان الماء<br><br>
+                            
+                            <strong>ثقب الجدار للأنابيب:</strong><br>
+                            • ثقب بقطر 65-80 مم حسب الحاجة<br>
+                            • ميل الثقب قليلاً للخارج لتصريف الماء<br>
+                            • تنظيف الثقب من الأتربة والحطام
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="maintenance-tip animate-fadeInRight">
+                        <i class="fas fa-industry tip-icon"></i>
+                        <h5 class="tip-title">الخطوة 4: تركيب الوحدة الخارجية</h5>
+                        <p class="tip-description">
+                            <strong>إعداد القاعدة:</strong><br>
+                            • صب قاعدة خرسانية بأبعاد مناسبة<br>
+                            • أو استخدام حوامل معدنية مثبتة بالجدار<br>
+                            • التأكد من الاستواء والثبات<br><br>
+                            
+                            <strong>تثبيت الوحدة:</strong><br>
+                            • رفع الوحدة بحذر ووضعها على القاعدة<br>
+                            • ربط براغي التثبيت بإحكام<br>
+                            • ترك مسافة 30 سم على الأقل من جميع الجهات<br>
+                            • فحص عدم وجود اهتزاز أو حركة
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="maintenance-tip animate-fadeInLeft">
+                        <i class="fas fa-pipe tip-icon"></i>
+                        <h5 class="tip-title">الخطوة 5: توصيل الأنابيب والتوصيلات</h5>
+                        <p class="tip-description">
+                            <strong>أنابيب النحاس:</strong><br>
+                            • قطع الأنابيب بالطول المطلوب<br>
+                            • تنظيف حواف القطع من الأتربة<br>
+                            • عزل الأنابيب بمادة البولي يوريثان<br>
+                            • توصيل الأنابيب بين الوحدتين<br><br>
+                            
+                            <strong>أنبوب الصرف:</strong><br>
+                            • توصيل أنبوب صرف المياه<br>
+                            • التأكد من الميل الصحيح للتصريف<br>
+                            • فحص عدم وجود انسداد أو التواء
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="maintenance-tip animate-fadeInRight">
+                        <i class="fas fa-plug tip-icon"></i>
+                        <h5 class="tip-title">الخطوة 6: التوصيل الكهربائي</h5>
+                        <p class="tip-description">
+                            <strong>الكابلات الكهربائية:</strong><br>
+                            • استخدام كابلات بالمقاس المناسب<br>
+                            • توصيل كابل الكهرباء الرئيسي<br>
+                            • توصيل كابل التحكم بين الوحدتين<br>
+                            • تأمين جميع التوصيلات بإحكام<br><br>
+                            
+                            <strong>القاطع الكهربائي:</strong><br>
+                            • تركيب قاطع منفصل للتكييف<br>
+                            • اختيار قاطع مناسب لقدرة التكييف<br>
+                            • التأكد من التأريض الصحيح
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pre-Installation Checklist -->
+            <div class="feature-card animate-fadeInUp mt-5">
+                <h4 class="card-title mb-4">
+                    <i class="fas fa-clipboard-check me-2" style="color: var(--primary-color);"></i>
+                    قائمة فحص ما قبل التركيب
+                </h4>
+                
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h5 style="color: var(--secondary-color); margin-bottom: 1rem;">المتطلبات الكهربائية</h5>
+                        <ul style="line-height: 1.8; color: #4b5563;">
+                            <li>فحص الجهد الكهربائي (220V أو 380V)</li>
+                            <li>التأكد من وجود نقطة كهرباء مناسبة</li>
+                            <li>فحص قدرة اللوحة الكهربائية</li>
+                            <li>التأكد من وجود تأريض صحيح</li>
+                            <li>قياس استقرار الجهد الكهربائي</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5 style="color: var(--secondary-color); margin-bottom: 1rem;">المتطلبات الإنشائية</h5>
+                        <ul style="line-height: 1.8; color: #4b5563;">
+                            <li>فحص قوة الجدار لتحمل الوزن</li>
+                            <li>التأكد من إمكانية الثقب</li>
+                            <li>فحص المساحة المطلوبة</li>
+                            <li>التأكد من وجود مكان للوحدة الخارجية</li>
+                            <li>فحص مسار الأنابيب المقترح</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5 style="color: var(--secondary-color); margin-bottom: 1rem;">المتطلبات البيئية</h5>
+                        <ul style="line-height: 1.8; color: #4b5563;">
+                            <li>قياس حجم الغرفة المراد تكييفها</li>
+                            <li>فحص مصادر الحرارة في الغرفة</li>
+                            <li>التأكد من التهوية الطبيعية</li>
+                            <li>فحص العزل الحراري للغرفة</li>
+                            <li>تقدير عدد الأشخاص المعتاد</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing and Commissioning -->
+            <div class="comparison-table animate-fadeInUp mt-5">
+                <h4 class="text-center mb-4" style="color: var(--dark-color); font-weight: 600;">
+                    جدول الاختبارات النهائية والتشغيل
+                </h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>نوع الاختبار</th>
+                                <th>المعيار المطلوب</th>
+                                <th>طريقة القياس</th>
+                                <th>القيمة المقبولة</th>
+                                <th>إجراء التصحيح</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>اختبار التسرب</strong></td>
+                                <td>عدم وجود تسرب في النظام</td>
+                                <td>جهاز كشف التسريب</td>
+                                <td>صفر تسريب</td>
+                                <td>إحكام التوصيلات</td>
+                            </tr>
+                            <tr>
+                                <td><strong>اختبار الفاكيوم</strong></td>
+                                <td>سحب الهواء والرطوبة</td>
+                                <td>مقياس ضغط</td>
+                                <td>أقل من -29.9 inHg</td>
+                                <td>إعادة السحب</td>
+                            </tr>
+                            <tr>
+                                <td><strong>اختبار الكهرباء</strong></td>
+                                <td>الجهد والتيار الصحيح</td>
+                                <td>مقياس الفولتية</td>
+                                <td>220V ±10%</td>
+                                <td>فحص التوصيلات</td>
+                            </tr>
+                            <tr>
+                                <td><strong>اختبار التبريد</strong></td>
+                                <td>الوصول لدرجة الحرارة المطلوبة</td>
+                                <td>ترمومتر رقمي</td>
+                                <td>خلال 10-15 دقيقة</td>
+                                <td>فحص كمية الغاز</td>
+                            </tr>
+                            <tr>
+                                <td><strong>اختبار الصرف</strong></td>
+                                <td>تصريف مناسب للمياه</td>
+                                <td>فحص بصري</td>
+                                <td>لا توجد تسريبات</td>
+                                <td>تعديل الميل</td>
+                            </tr>
+                            <tr>
+                                <td><strong>اختبار الضوضاء</strong></td>
+                                <td>مستوى ضوضاء مقبول</td>
+                                <td>جهاز قياس الديسيبل</td>
+                                <td>أقل من 45 dB</td>
+                                <td>فحص الاهتزاز</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="warning-box animate-fadeInUp">
+                <h5 style="color: #dc2626; font-weight: 600; margin-bottom: 1rem;">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    تحذيرات مهمة عند التركيب
+                </h5>
+                <div style="color: #dc2626; line-height: 1.7;">
+                    <p><strong>السلامة أولاً:</strong> فصل الكهرباء تماماً قبل بدء أي عمل كهربائي، واستخدام معدات الأمان الشخصية.</p>
+                    <p><strong>احترافية التركيب:</strong> تركيب تكييف السبليت يتطلب خبرة تقنية متخصصة، لا تحاول التركيب بنفسك إذا لم تكن مؤهلاً.</p>
+                    <p><strong>الضمان:</strong> التركيب الخاطئ يلغي ضمان الشركة المصنعة، تأكد من اختيار فني معتمد.</p>
+                    <p><strong>التصاريح:</strong> قد تحتاج تصريح من البلدية أو إدارة المبنى لتركيب الوحدة الخارجية.</p>
+                    <p><strong>البيئة:</strong> تأكد من التخلص الآمن من مواد التعبئة والتغليف وأي مواد قديمة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="content-section">
+        <div class="container">
+            <h2 class="section-title animate-scaleIn">
+                الأسئلة الشائعة
+            </h2>
+            <p class="section-subtitle animate-fadeInUp">
+                إجابات شافية للأسئلة الأكثر تكراراً حول تكييفات السبليت
+            </p>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="faq-item animate-fadeInUp">
+                        <button class="faq-question" onclick="toggleFaq(this)">
+                            ما هو الفرق بين تكييف السبليت العادي والعاكس (Inverter)؟
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>
+                                <strong>التكييف العادي:</strong> يعمل بنظام التشغيل والإيقاف (On/Off)، حيث يعمل الضاغط بكامل قدرته عند التشغيل ويتوقف عند الوصول لدرجة الحرارة المطلوبة، ثم يعود للعمل عند ارتفاع الحرارة مرة أخرى.
+                            </p>
+                            <p>
+                                <strong>التكييف العاكس:</strong> يستخدم تقنية متطورة تتحكم في سرعة الضاغط باستمرار حسب الحاجة. بدلاً من التشغيل والإيقاف، يقلل أو يزيد من سرعة العمل للحفاظ على درجة حرارة ثابتة.
+                            </p>
+                            <p>
+                                <strong>الفوائد:</strong> التكييف العاكس يوفر حتى 60% من استهلاك الكهرباء، يعمل بهدوء أكثر، ويحافظ على درجة حرارة ثابتة بدون تذبذب، كما أن عمره الافتراضي أطول.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item animate-fadeInUp">
+                        <button class="faq-
